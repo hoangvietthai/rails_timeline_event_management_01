@@ -32,3 +32,40 @@ en:
       contact: "Contact"
       login: "Log In"
       calender: "Calender"
+      setting: "Settings"
+      profile: "Profile"
+      user: "User"
+      account: "Account"
+    layoutlog:
+      log__in: "Log In"
+  application:
+    login: "Log In"
+  sessions:
+    create:
+      please_log: "Please Log In"
+      cannot: "Cannot activated"
+    new:  
+      we: "We make it awesome"
+      remember: "Remember me"
+      login: "Log in"
+      dont: "Don't have an account?"
+      sign_up: "Sign up now!"
+  static_pages:
+    please_login: "Please login"
+  users:
+      please_check_email: "Please check email"
+      log_false: "Log In false"
+      updated: "Updated"
+      deleted: "Deleted"
+      delete_fail: "Delete fail"
+      please_log: "Please LogIn"
+      user_not: "User not found"
+  users:
+    new:
+      create: "Create Your account"
+      already: "Already have an account?"
+      email: "Email"
+      password: "Password"
+      pass_con: "Password confirm"
+      sign_in : "Sign in"
+    

@@ -58,19 +58,30 @@
           <span class="icon-bar"></span>
         </button>
       </div>
-      <div class="navbar-collapse collapse clearfix">
+      <div class="navbar-collapse">
         <ul class="navigation">
           <li><%= link_to t(".home"), home_path %></li>
           <li><%= link_to t(".about"), about_path %></li>
           <li><%= link_to t(".contact"), contact_path %></li>
           <li><%= link_to t(".help"), help_path %></li>
+          <% if logged_in? %>
+            <li class="dropdown appoinment-btn">
+              <%= link_to "#", class: "dropdown-toggle thm-btn pt-5 pb-5", data:{ toggle: "dropdown"} do %> 
+              <%= current_user.email %><b class="caret"></b>
+              <% end %>
+              <ul class="dropdown-menu">
+                <li><%= link_to t(".profile"), current_user %></li>
+                <li><%= link_to t(".setting"), edit_user_path(current_user) %></li>
+                <li class="divider"></li>
+                <li>
+                  <%= link_to t(".logout"), logout_path, method: :delete %>
+                </li>
+              </ul>
+            </li>
         </ul>
+        <% end %>
       </div>
       </nav>
-        <div class="appoinment-btn">
-          <%= link_to t(".login"), "#", class: "thm-btn pt-5 pb-5 mt-5
-            letter-spacing-1", data: {toggle: "modal"} %>
-        </div>
      </div>
     </div>
   </div>

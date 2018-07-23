@@ -1,0 +1,147 @@
+.login-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+  max-width: 600px;
+}
+
+.login-info h3 {
+  color: #fff;
+}
+
+.login-info p {
+  color: #fff;
+}
+.overview-bgi {
+  position: relative;
+}
+
+.overview-bgi:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.overview .btn-border {
+  padding: 7px 12px !important;
+  border-radius: 0;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 500;
+}
+.cnt-bg-photo {
+  background-size: cover;
+  top: 0;
+  min-height: 100vh;
+  bottom: 0;
+  max-height: 100%;
+}
+.login-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 30px;
+  max-width: 600px;
+}
+
+.login-info h3 {
+  color: #fff;
+}
+
+.login-info p {
+  color: #fff;
+}
+.content-form-box .form-control {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 13px;
+  border: 1px solid #efefef;
+  outline: 0;
+  color: #6c6c6c;
+  height: 42px;
+  border-radius: 3px;
+}
+.content-form-box .form-control:focus {
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #efefef;
+  outline: 0;
+  box-shadow: none;
+}
+.content-form-box .form-group {
+  margin-bottom: 25px;
+}
+.content-form-box .btn {
+  cursor: pointer;
+  padding: 11px 20px 10px;
+  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: none;
+  border-radius: 3px;
+}
+.content-form-box {
+  padding: 0 70px;
+  left: 0;
+  height: 100vh;
+  display: table-cell;
+  vertical-align: middle;
+}
+.content-form-box p {
+  font-size: 13px;
+  color: #80828e;
+}
+.content-form-box.register-box .login-footer {
+  width: 100%;
+  position: inherit;
+}
+.content-form-box.forgot-box {
+  width: 100%;
+  position: inherit;
+  bottom: 0;
+}
+
+.content-form-box.register-box {
+  margin: 70px auto 0;
+}
+.login-header {
+  font-weight: 500;
+  margin: 0 0 30px;
+  font-size: 22px;
+  color: #515365;
+}
+.login-header h4 {
+  font-size: 22px;
+  color: #515365;
+}
+
+.login-header img {
+  height: 30px;
+}
+.login-footer img {
+  height: 20px;
+}
+
+.login-footer {
+  padding: 20px;
+  border-top: solid 1px #ececec;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.content-form-box.register-box .login-footer {
+  width: 100%;
+  position: inherit;
+}
+.login-footer p {
+  font-size: 13px;
+  margin: 0;
+}
