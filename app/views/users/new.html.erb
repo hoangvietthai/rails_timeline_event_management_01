@@ -1,4 +1,6 @@
 <% provide :title, t(".title_signup") %>
+<% provide :button_text, t(".create") %>
+
 <div class="register-page">
   <div class="container-fluid">
     <div class="row">
@@ -8,31 +10,9 @@
       </div>
       <div class="col-lg-8 col-md-8 col-sm-12 align-self-center">
         <div class="content-form-box register-box">
-          <% flash.each do |message_type, message| %>
-            <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
-          <% end %>
-          <div class="login-header"><h4><%= t (".create") %></h4></div>
-          <%= form_for @user, class: "new_user" do |f| %>
-            <%= render "shared/error_messages", object: f.object %>
-            <div class="form-group">
-              <%= f.label :email %>
-              <%= f.email_field :email, placeholder: "Email Address", class: "form-control" %>
-            </div>
-            <div class="form-group">
-              <%= f.label :password %>
-              <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
-            </div>
-            <div class="form-group">
-              <%= f.label :password_confirmation %>
-              <%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: "form-control" %>
-            </div>
-            <div class="form-group">
-              <%= f.submit t(".create"), class: "btn btn-color btn-md btn-block btn-signup" %>
-            </div>
-          <% end %>
-          </form>
+          <%= render "form" %>
           <div class="login-footer text-center">
-            <p><%= t (".already") %>
+            <p><%= t ".already" %>
               <%= link_to t(".sign_in"), login_path %>
           </div>
         </div>

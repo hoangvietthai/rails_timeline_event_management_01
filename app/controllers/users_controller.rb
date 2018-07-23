@@ -1,10 +1,10 @@
 class UsersController < ApplicationController
-  layout "layoutlog", only: [:new, :create]
+  layout "layoutlog", only: [:new, :create, :edit, :update]
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :correct_user, only: [:edit, :update]
-  before_action :admin_user, only: :destroy
   before_action :find_by, only: [:show, :edit, :update, :correct_user,
     :destroy]
+  before_action :correct_user, only: [:edit, :update]
+  before_action :admin_user, only: :destroy
 
   def index
     @users = User.where(activated: true).paginate page: params[:page],
@@ -56,13 +56,6 @@ class UsersController < ApplicationController
       :password_confirmation
   end
 
-  def logged_in_user
-    return if logged_in?
-    store_location
-    flash[:danger] = t ".please_log"
-    redirect_to login_url
-  end
-
   def correct_user
     redirect_to root_url unless current_user? @user
   end
@@ -75,5 +68,6 @@ class UsersController < ApplicationController
     @user = User.find_by id: params[:id]
     return if @user
     flash[:danger] = t ".user_not"
+    redirect_to root_url
   end
 end
