@@ -12,6 +12,7 @@ class User < ApplicationRecord
   has_secure_password
   validates :password, presence: true,
     length: {minimum: Settings.min1}, allow_nil: true
+  enum role: {admin: 0, leader: 1, user: 2}
 
   class << self
     def digest string
