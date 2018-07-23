@@ -1,1 +1,34 @@
 en:
+  layouts:
+    footer:
+      about_garden: "About GARDEN PLATN"
+      phase: "Phasellus at quam tristique, cursus tellus vitae, convallis neque. Sed a lacinia sapien. Etiam dignissim sit amet felis ac sagittis. Sed libero arcu, pharetra et ante in elementum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae."
+      userful: "Useful Links"
+      privacy: "Privacy Policy"
+      terms: "Terms of Services"
+      garden: "Garden & Lamp; Care Guide"
+      special: "Special Services"
+      sitemap: "Sitemap"
+      twitter: "Twitter Feed"
+      news: "Newsletter Subscribe"
+      vivamus: "Vivamus consequat, felis at aliquam elementum, massa sem
+        dignissim elit, sit amet cursus massa tortor eget ante."
+      call: "Call Us Anytime"
+      sdt: "(+064)-342-68372"
+      email: "Email Us At"
+      nam: "2018 &copy; Garden-Plants Service."
+      info: "info@garden-care.com"
+    application:
+      timeline: "My Timeline"
+    header:
+      hellow: "Hello, Welcome to   Timeline, Inc."
+      nam1: "(+064)-342-27582"
+      nam2: "9am - 5pm"
+      nam3: "info@garden-care.com"
+      nam4: "Find us on map"
+      home: "Home"
+      help: "Help"
+      about: "Abount"
+      contact: "Contact"
+      login: "Log In"
+      calender: "Calender"

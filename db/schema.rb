@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2018_07_23_070126) do
 
-  create_table "events", force: :cascade do |t|
+  create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "place"
     t.datetime "time_from"
     t.datetime "time_to"
@@ -24,29 +24,29 @@ ActiveRecord::Schema.define(version: 2018_07_23_070126) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "notifications", force: :cascade do |t|
+  create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "notify_before"
-    t.integer "event_id"
+    t.bigint "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_notifications_on_event_id"
   end
 
-  create_table "user_events", force: :cascade do |t|
+  create_table "user_events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "status"
-    t.integer "event_id"
-    t.integer "user_id"
+    t.bigint "event_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["event_id"], name: "index_user_events_on_event_id"
     t.index ["user_id"], name: "index_user_events_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
     t.string "remember_digest"
-    t.string "role"
+    t.integer "role"
     t.string "activation_digest"
     t.boolean "activated"
     t.datetime "activated_at"
@@ -57,4 +57,7 @@ ActiveRecord::Schema.define(version: 2018_07_23_070126) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
+  add_foreign_key "notifications", "events"
+  add_foreign_key "user_events", "events"
+  add_foreign_key "user_events", "users"
 end
