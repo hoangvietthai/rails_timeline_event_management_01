@@ -1,4 +1,5 @@
 en:
+  timeline: "My Timeline"
   layouts:
     footer:
       about_garden: "About GARDEN PLATN"
@@ -18,8 +19,6 @@ en:
       email: "Email Us At"
       nam: "2018 &copy; Garden-Plants Service."
       info: "info@garden-care.com"
-    application:
-      timeline: "My Timeline"
     header:
       hellow: "Hello, Welcome to   Timeline, Inc."
       nam1: "(+064)-342-27582"
@@ -36,10 +35,6 @@ en:
       profile: "Profile"
       user: "User"
       account: "Account"
-    layoutlog:
-      log__in: "Log In"
-  application:
-    login: "Log In"
   sessions:
     create:
       please_log: "Please Log In"
@@ -50,6 +45,7 @@ en:
       login: "Log in"
       dont: "Don't have an account?"
       sign_up: "Sign up now!"
+      forgot_pass: "(forgot password)"
   static_pages:
     please_login: "Please login"
     about:
@@ -115,14 +111,13 @@ en:
         pharetra et ante in, elementum scelerisque arcu. Curabitur
         sagittis non justo at ultri"
   users:
-      please_check_email: "Please check email"
-      log_false: "Log In false"
-      updated: "Updated"
-      deleted: "Deleted"
-      delete_fail: "Delete fail"
-      please_log: "Please LogIn"
-      user_not: "User not found"
-  users:
+    log_false: "Log In false"
+    please_check_email: "Please check email"
+    updated: "Updated"
+    deleted: "Deleted"
+    delete_fail: "Delete fail"
+    please_log: "Please LogIn"
+    user_not: "User not found"
     new:
       create: "Create Your account"
       already: "Already have an account?"
@@ -130,3 +125,42 @@ en:
       password: "Password"
       pass_con: "Password confirm"
       sign_in : "Sign in"
+      title_signup: "Sign up"
+    index:
+      users_all: "All users"
+  shared:
+    error_messages:
+      error_noti: "The form contains "
+      error: "error"
+  user_mailer:
+    account_activation:
+      activate: "Activate"
+      mail_message: "Welcome to the Sample App! Click on the link below to activate your account:"
+      hi: "Hi"
+    password_reset:
+      reset: "Password reset"
+      click_pls: "To reset your password click the link below:"
+      reset_btn: "Reset password"
+      expire_msg: "This link will expire in two hours."
+      reset_noti: "If you did not request your password to be reset, please ignore this email and
+        your password will stay as it is."
+  activate_account: "Account activation"
+  reset_pass: "Password reset"
+  account_activations:
+    active_success: "Account activated!"
+    active_danger: "Invalid activation link"
+  password_resets:
+    new:
+      we: "We make it awesome"
+      forgot_password: "Forgot password"
+      submit_btn: "Submit"
+    edit:
+      we: "We make it awesome"
+      reset_pass: "Reset password"
+      update_pass_btn: "Update password"
+      confirm: "Confirmation"
+    check_mail_pls: "Email sent with password reset instructions"
+    mail_not_found: "Email address not found"
+    pass_reseted: "Password has been reset."
+    reset_danger: "Password reset has expired."
+    error: "Occur error!"
