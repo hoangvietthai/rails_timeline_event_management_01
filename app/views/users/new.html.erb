@@ -1,0 +1,48 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPoppins:400,500,700,800,900%7CRoboto:100,300,400,400i,500,700">
+</head>
+<body id="top">
+<div class="register-page">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 cnt-bg-photo d-none d-xl-block d-lg-block d-md-block" style="background-image: url(assets/framgiabackgroup.jpg)">
+                <div class="register-info">
+                </div>
+            </div>
+            <div class="col-lg-8 col-md-8 col-sm-12 align-self-center">
+                <div class="content-form-box register-box">
+                    <div class="login-header"><h4><%= t (".create") %></h4></div>
+                    <form class="new_user" id="new_user" action="/users" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="dk5GOtuWXa/qusi+lKqoYCYO9cGDhxHcz89YbZ2TvwER70OMBBXZadQUI4mY48YS1okE8bAJibrhukB9UXMd4Q==" />
+                        <div class="form-group">
+                            <label for="user_email"><%= t (".email") %></label>
+                            <input class="form-control " type="email" name="user[email]" id="user_email" placeholder="Email Address" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user_password"><%= t (".password") %></label>
+                            <input class="form-control" type="password" name="user[password]" id="user_password" placeholder="Password" />
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user_password_confirmation"><%= t (".pass_con") %></label>
+                            <input class="form-control" type="password" name="user[password_confirmation]" id="user_password_confirmation" placeholder="Confirm Password" />
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="btn btn-color btn-md btn-block"><%= t (".create") %></button>
+                        </div>
+                        <div class="login-footer text-center">
+                            <p><%= t (".already") %>
+                            <%= link_to t(".sign_in"), login_path %>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

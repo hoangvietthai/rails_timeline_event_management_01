@@ -1,8 +1,18 @@
 /*
+ *= require default
+ *= require animate.min
+ *= require dropzone
+ *= require jquery.mCustomScrollbar
+ *= require jquery.selectBox
+ *= require leaflet
+ *= require magnific-popup
+ *= require map
+ *= require rangeslider
  *= require bootstrap-margin-padding
  *= require bootstrap.min
  *= require responsive
  *= require style
+ *= require style2
  *= require animate
  *= require flaticon
  *= require font-awesome-animation.min
