@@ -44,7 +44,7 @@ en:
     create:
       please_log: "Please Log In"
       cannot: "Cannot activated"
-    new:  
+    new:
       we: "We make it awesome"
       remember: "Remember me"
       login: "Log in"
@@ -52,6 +52,68 @@ en:
       sign_up: "Sign up now!"
   static_pages:
     please_login: "Please login"
+    about:
+      garden: "Garden Care HISTORY"
+      every: "EVERYTHING BEGAN IN A GARAGE"
+      pell: "Pellentesque semper quis neque dictum hendrerit. Sed nulla ipsum, porttitor pharetra tortor in,consequat imperdiet nisi.
+        Phasellus at quam tristique, cursus tellus vitae, convallis neque."
+      our: "Our Stories"
+      black: "Back in 1982"
+      aliquam: "Aliquam magna nibh, mattis a urna nec, semper venenatis magna.
+       Cras suscipit neque libero, in bibendum orci scelerisque mollis.
+        Nunc auctor ut erat vel euismod. Aenean tristique leo eros, at gravida"
+      fusce: "Fusce imperdiet libero et eros tincidunt, vitae accumsan purus
+       pulvinar. Vivamus varius, metus et scelerisque viverra. Morbi mattis,
+       lorem sit amet gravida eleifend, nisl felis tincidunt dui, nec porta
+        turpis ligula eu nisl. Donec lacus dolor, facilisis at tortor ac, congue vulputate. massa semper eu."
+      tipping: "The tipping point"
+      quisque: "Quisque eleifend volutpat orci nec fermentum. Curabitur quis
+       dignissim nibh. Suspendisse potenti. Vivamus dictum volutpat dapibus.
+       Fusce sed varius massa. Fusce et purus sit amet erat fermentum rutrum. Pellentesque pellentesque auctor vehicula. Integer ut ligula blandit, pellentesque neque in, hendrerit magna."
+      nulla: "Nulla venenatis auctor quam, ac porta lectus dictum in"
+      aliquam: "Aliquam sodales nisi sit amet lorem"
+      suspendisse: "Suspendisse vulputate tellus in justo convallis imperdiet"
+      Morbi: "Morbi id lorem consequat, sodales mi non"
+      Cras: "Cras fringilla efficitur elementum"
+      sodales: "Aliquam sodales facilisis dolor, feugiat elementum tellus
+        condimentum at. Mauris sem nisi, dictum eget facilisis quis, placerat
+        eu nisl. Phasellus consectetur pharetra elit id maximus.  Aliquam
+        facilisis sodales erat, sit amet euismod eros dignissim aliquam."
+      our_miss: "Our Missions"
+      proin: "Proin nec lacus lacus. Sed vitae consectetur est, et mattis felis.
+       Fusce lacinia nibh vitae fermentum finibus. Donec malesuada efficitur
+        dapibus. Cras euismod nunc tellus."
+      our_vision: "Our Vision and Plan"
+      meet: "MEET OUR EXPERIENCED TEAM"
+      we_are: "WE ARE EXPERTS IN OUR FIELD"
+      semper: "Pellentesque semper quis neque dictum hendrerit. Sed nulla ipsum, porttitor pharetra tortor in,consequat imperdiet nisi.
+        Phasellus at quam tristique, cursus tellus vitae, convallis neque. "
+      timo: "Timothy Newman"
+      tsenior: "TSenior Worker"
+      success: "SUCCESSFULL PROJECT"
+      so1: "300"
+      happy: "HAPPY PEOPLE"
+      award: "AWARD WINNING"
+      so2: "200"
+      run: "RUNNING PROJECT"
+    contact:
+      drop: "Drop us a line"
+      we: "We’d love to hear from you"
+      contact: "Contact Info."
+      connect: "Connect with us"
+      info: "Information"
+      so: "(+064)-342-68382"
+      info_1: "info@automation-logistics.com"
+    help:
+      lorem: "Lorem ipsum dolor sit amet, an eripuit laboramus sententiae duo lorem
+       sio?"
+      lorem1: "Lorem ipsum dolor sit amet, ea vel quem nullam,
+          adhuc vituperata mea ei, verear regione ornatus ius ut.
+          labores facilisis"
+      did: "Did not find your answer?"
+      etiam: "Etiam dignissim sit amet felis ac sagittis. Sed libero arcu,
+        pharetra et ante in, elementum scelerisque arcu. Curabitur
+        sagittis non justo at ultri"
   users:
       please_check_email: "Please check email"
       log_false: "Log In false"
@@ -68,4 +130,3 @@ en:
       password: "Password"
       pass_con: "Password confirm"
       sign_in : "Sign in"
-    
