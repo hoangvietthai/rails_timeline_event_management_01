@@ -1,4 +1,21 @@
 /*
+ *= require bootstrap-margin-padding
+ *= require bootstrap.min
+ *= require responsive
+ *= require style
+ *= require animate
+ *= require flaticon
+ *= require font-awesome-animation.min
+ *= require font-awesome.min
+ *= require fullcalender
+ *= require hover
+ *= require jquery.fancybox
+ *= require owl
+ *= require revolution-slider
+ *= require jquery.mCustomScrollbar.min
+ *= require font-awesome
+ *= require jquery.timepicker
+ *= require jquery-ui
  *= require_tree .
  *= require_self
  */

@@ -1,4 +1,15 @@
 //= require rails-ujs
+//= require jquery
+//= require bootstrap
 //= require activestorage
 //= require turbolinks
+//= require bootstrap.min
+//= require cable
+//= require calendar-events-data
+//= require js-collection
+//= require revolution.min
+//= require flipclock
+//= require googlemaps
+//= require jquery-ui.min
+//= require script
 //= require_tree .

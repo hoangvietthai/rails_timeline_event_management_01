@@ -1,0 +1,93 @@
+<footer class="main-footer">
+  <div class="footer-upper">
+    <div class="go-up">
+      <div class="curve scroll-to-target" data-target="#main-header">
+        <span class="icon fa fa-arrow-up"></span>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12 column">
+          <div class="footer-widget about-widget">
+            <h2><%= t ".about_garden" %></h2>
+            <div class="text">
+              <p><%= t ".phase" %></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 column">
+          <div class="footer-widget links">
+            <h2><%= t ".userful" %></h2>
+            <ul>
+              <li><%= link_to t(".privacy"), "#" %></li>
+              <li><%= link_to t(".terms"), "#" %></li>
+              <li><%= link_to t(".garden"), "#" %></li>
+              <li><%= link_to t(".special"), "#" %></li>
+              <li><%= link_to t(".sitemap"), "#" %></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 column">
+          <div class="footer-widget twitter-feed">
+            <h2><%= t ".twitter" %></h2>
+            <div class="twitter" data-twitter-query-count="3"
+              data-twitter-name="envato"
+              data-slide-count="2"
+              data-enable-slide="true">
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 column">
+          <div class="footer-widget newsletter-widget">
+            <h2><%= t ".news" %></h2>
+            <div class="text">
+              <p><%= t ".vivamus" %></p>
+            </div>
+            <br>
+            <div class="form-box">
+              <form method="post" action="">
+                <div class="form-group">
+                  <input type="email" name="email" value=""
+                  placeholder="Enter your email here..." required>
+                  <button type="submit" class="btn-submit"><span class="icon fa fa-long-arrow-right"></span></button>
+                </div>
+              </form>
+            </div>
+           </div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="contact-info">
+        <ul>
+          <li>
+            <div class="info-title"><span class="fa fa-phone"></span>
+            <%= t ".call" %></div><p class="info"><%= t ".sdt" %></p>
+          </li>
+          <li>
+            <div class="info-title"><span class="fa fa-at"></span>
+             <%= t ".email" %></div>
+             <p class="info">
+              <%= link_to t(".info"), "mailto:info@garden-care.com" %>
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+   </div>
+  </div>
+  <div class="footer-bottom">
+  <div class="auto-container">
+    <div class="copyright"><%= t ".nam" %></div>
+    <div class="social-links">
+      <a href="#" class="icon fa fa-facebook-f"></a>
+      <a href="#" class="icon fa fa-twitter"></a>
+      <a href="#" class="icon fa fa-pinterest"></a>
+      <a href="#" class="icon fa fa-youtube-play"></a>
+      <a href="#" class="icon fa fa-envelope"></a>
+    </div>
+  </div>
+  </div>
+</footer>
+<div class="scroll-to-top scroll-to-target" data-target="#main-header">
+  <span class="fa fa-arrow-up"></span>
+</div>
