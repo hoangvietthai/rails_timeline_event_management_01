@@ -1,50 +1,42 @@
-<html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7CPoppins:400,500,700,800,900%7CRoboto:100,300,400,400i,500,700">
-  </head>
-  <body id="top">
-    <div class="register-page">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-4 col-md-4 cnt-bg-photo d-none d-xl-block d-lg-block d-md-block" style="background-image: url(assets/framgiabackgroup.jpg)">
-            <div class="register-info">
+<% provide :title, t(".title_signup") %>
+<div class="register-page">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-4 col-md-4 cnt-bg-photo d-none d-xl-block d-lg-block d-md-block framgia_background">
+        <div class="register-info">
+        </div>
+      </div>
+      <div class="col-lg-8 col-md-8 col-sm-12 align-self-center">
+        <div class="content-form-box register-box">
+          <% flash.each do |message_type, message| %>
+            <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+          <% end %>
+          <div class="login-header"><h4><%= t (".create") %></h4></div>
+          <%= form_for @user, class: "new_user" do |f| %>
+            <%= render "shared/error_messages", object: f.object %>
+            <div class="form-group">
+              <%= f.label :email %>
+              <%= f.email_field :email, placeholder: "Email Address", class: "form-control" %>
             </div>
-          </div>
-          <div class="col-lg-8 col-md-8 col-sm-12 align-self-center">
-            <div class="content-form-box register-box">
-              <div class="login-header"><h4><%= t (".create") %></h4></div>
-              <%= form_for @user, class: "new_user" do |f| %>
-
-                <div class="form-group">
-                  <%= f.label :email %>
-                  <%= f.email_field :email, placeholder: "Email Address", class: "form-control" %>
-                </div>
-
-                <div class="form-group">
-                  <%= f.label :password %>
-                  <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
-                </div>
-
-                <div class="form-group">
-                  <%= f.label :password_confirmation %>
-                  <%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: "form-control" %>
-                </div>
-
-                <div class="form-group">
-                  <%= f.submit t(".create"), class: "btn btn-color btn-md btn-block" %>
-                </div>
-              <% end %>
-              <div class="login-footer text-center">
-                <p><%= t (".already") %>
+            <div class="form-group">
+              <%= f.label :password %>
+              <%= f.password_field :password, placeholder: "Password", class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :password_confirmation %>
+              <%= f.password_field :password_confirmation, placeholder: "Confirm Password", class: "form-control" %>
+            </div>
+            <div class="form-group">
+              <%= f.submit t(".create"), class: "btn btn-color btn-md btn-block btn-signup" %>
+            </div>
+          <% end %>
+          </form>
+          <div class="login-footer text-center">
+            <p><%= t (".already") %>
               <%= link_to t(".sign_in"), login_path %>
-              </div>
-              </form>
-            </div>
           </div>
         </div>
       </div>
     </div>
-  </body>
-</html>
+  </div>
+</div>

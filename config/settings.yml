@@ -1,2 +1,6 @@
 max1: 50
 min1: 6
+paginate:
+  per_page: 10
+password:
+  expired: 2

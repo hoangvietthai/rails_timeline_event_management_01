@@ -1,0 +1,49 @@
+$state-danger-text: #ff2128;
+$blue: #3fbc3e;
+$blue1: #1e7625;
+
+.error_explanation {
+  color: red;
+
+  ul {
+    color: red;
+    margin: 0 0 30px;
+  }
+}
+
+.field_with_errors {
+  .form-control {
+    color: $state-danger-text;
+  }
+}
+
+.checkbox {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+
+  span {
+    font-weight: normal;
+    margin-left: 20px;
+  }
+}
+
+.session_remember_me {
+  margin-left: 0;
+  width: auto;
+}
+
+.framgia_background {
+  background-image: url("banner-1.jpg");
+}
+
+.btn-signup {
+  color: white;
+  background-color: $blue;
+  font-weight: bold;
+
+  &:hover{
+    color: white;
+    background-color: $blue1;
+  }
+}
