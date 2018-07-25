@@ -20,7 +20,7 @@ en:
       nam: "2018 &copy; Garden-Plants Service."
       info: "info@garden-care.com"
     header:
-      hellow: "Hello, Welcome to   Timeline, Inc."
+      hellow: "Hello, Welcome to Framgia, Inc."
       nam1: "(+064)-342-27582"
       nam2: "9am - 5pm"
       nam3: "info@garden-care.com"
@@ -30,7 +30,7 @@ en:
       about: "Abount"
       contact: "Contact"
       login: "Log In"
-      calender: "Calender"
+      calender: "Calendar"
       setting: "Settings"
       profile: "Profile"
       user: "User"
@@ -49,8 +49,8 @@ en:
   static_pages:
     please_login: "Please login"
     about:
-      garden: "Garden Care HISTORY"
-      every: "EVERYTHING BEGAN IN A GARAGE"
+      garden: "My Timeline Care HISTORY"
+      every: "EVERYTHING BEGAN IN A timeline"
       pell: "Pellentesque semper quis neque dictum hendrerit. Sed nulla ipsum, porttitor pharetra tortor in,consequat imperdiet nisi.
         Phasellus at quam tristique, cursus tellus vitae, convallis neque."
       our: "Our Stories"
@@ -84,7 +84,10 @@ en:
       we_are: "WE ARE EXPERTS IN OUR FIELD"
       semper: "Pellentesque semper quis neque dictum hendrerit. Sed nulla ipsum, porttitor pharetra tortor in,consequat imperdiet nisi.
         Phasellus at quam tristique, cursus tellus vitae, convallis neque. "
-      timo: "Timothy Newman"
+      timo: "Dang Nhu Thuy"
+      timo1: "Bui Quang Dai"
+      timo2: "Hoang Viet Thai"
+      timo3: "Kobayashi Tahei"
       tsenior: "TSenior Worker"
       success: "SUCCESSFULL PROJECT"
       so1: "300"

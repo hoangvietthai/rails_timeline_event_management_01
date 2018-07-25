@@ -13,31 +13,30 @@
       <div class="top-right">
         <ul class="clearfix">
           <li>
-            <a href="#">
-              <span class="fa fa-phone">
-              </span> <%= t ".nam1" %>
-            </a>
+            <%= link_to "#" do %>
+              <span class="fa fa-phone"></span>
+              <%= t ".nam1" %>
+            <% end %>
           </li>
           <li>
-            <a href="#">
+            <%= link_to "#" do %>
               <span class="fa fa-clock-o">
               </span><%= t ".nam2" %>
-            </a>
+            <% end %>
           </li>
           <li>
             <%= link_to "mailto:noreply@regulator.com" do%>
-
               <span class="fa fa-at">
               </span>
               <%= t ".nam3" %>
-            <%end %>
+            <% end %>
           </li>
           <li>
-           <%= link_to "mailto:noreply@regulator.com" do%>
+            <%= link_to "mailto:noreply@regulator.com" do%>
               <span class="fa fa-map-marker">
               </span>
               <%= t ".nam4" %>
-             <%end %>
+            <% end %>
           </li>
         </ul>
       </div>
@@ -47,53 +46,58 @@
     <div class="auto-container clearfix">
       <div class="outer-box">
         <div class="logo">
-          <%= image_tag "logo.png" %>
+          <%= image_tag "image.jpeg" %>
         </div>
-      <nav class="main-menu">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse"
-          data-target=".navbar-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="navbar-collapse">
-        <ul class="navigation">
-          <li><%= link_to t(".home"), home_path %></li>
-          <li><%= link_to t(".about"), about_path %></li>
-          <li><%= link_to t(".contact"), contact_path %></li>
-          <li><%= link_to t(".help"), help_path %></li>
-          <% if logged_in? %>
-            <li class="dropdown appoinment-btn">
-              <%= link_to "#", class: "dropdown-toggle thm-btn pt-5 pb-5", data:{ toggle: "dropdown"} do %> 
-              <%= current_user.email %><b class="caret"></b>
-              <% end %>
-              <ul class="dropdown-menu">
-                <li><%= link_to t(".profile"), current_user %></li>
-                <li><%= link_to t(".setting"), edit_user_path(current_user) %></li>
-                <li class="divider"></li>
-                <li>
-                  <%= link_to t(".logout"), logout_path, method: :delete %>
+        <nav class="main-menu">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          </div>
+          <div class="navbar-collapse">
+            <ul class="navigation">
+              <li>
+                <%= link_to t(".home"), home_path %>
+              </li>
+              <li>
+                <%= link_to t(".about"), about_path %>
+              </li>
+              <li>
+                <%= link_to t(".contact"), contact_path %>
+              </li>
+              <li>
+                <%= link_to t(".help"), help_path %>
+              </li>
+              <% if logged_in? %>
+                <li class="dropdown appoinment-btn">
+                  <%= link_to "#", class: "dropdown-toggle thm-btn pt-5 pb-5", data:{ toggle: "dropdown"} do %>
+                    <%= (current_user.email).to_s.split('@').first %><b class="caret"></b>
+                      <% end %>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <%= link_to t(".profile"), current_user %>
+                          </li>
+                          <li>
+                            <%= link_to t(".setting"), edit_user_path(current_user) %>
+                          </li>
+                          <li class="divider"></li>
+                          <li>
+                            <%= link_to t(".logout"), logout_path, method: :delete %>
+                          </li>
+                        </ul>
                 </li>
-              </ul>
-            </li>
-        </ul>
-        <% end %>
+            </ul>
+            <% end %>
+          </div>
+        </nav>
       </div>
-      </nav>
-     </div>
     </div>
   </div>
 </header>
-<section class="page-title"
-  style="background-image:url(/assets/page-title-1.jpg);">
+<section class="page-title" style="background-image:url(/assets/4.jpg);">
   <div class="auto-container">
     <h1><%= t ".calender" %></h1>
-  </div>
-  <div class="go-down">
-    <div class="curve scroll-to-target" data-target="#about-section">
-      <span class="icon fa fa-arrow-down"></span>
-    </div>
   </div>
 </section>
