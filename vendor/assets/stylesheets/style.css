@@ -573,8 +573,8 @@ ul,li{
 .main-header .header-lower .logo{
 	position:relative;
 	float:left;
-	padding-right:10px;
-	background:#6aaf08;
+	padding-right:50px;
+	background: white;
 }
 .main-header .header-lower .logo:before{
 	content:'';
@@ -583,7 +583,7 @@ ul,li{
 	top:0%;
 	width:1000px;
 	height:100%;
-	background:#6aaf08;
+	background: white;
 }
 .main-header .header-lower .logo:after{
 	content:'';
@@ -592,7 +592,7 @@ ul,li{
 	top:0%;
 	width:100px;
 	height:100%;
-	background:#6aaf08;
+	background: white;
 	transform:skewX(-25deg);
 	-webkit-transform:skewX(-25deg);
 	-ms-transform:skewX(-25deg);
@@ -628,7 +628,7 @@ ul,li{
 .main-menu .navigation > li > a{
 	position:relative;
 	display:block;
-	padding:10px 0px;
+	padding:10px 10px;
 	font-size:14px;
 	color:#6aaf08;
 	line-height:20px;
@@ -2140,12 +2140,13 @@ ul.list li {
 
 .page-title{
 	position:relative;
-	padding:100px 0px;
+	padding:120px 0px;
 	color:#ffffff;
 	background-position:center center;
 	background-size:cover;
 	background-repeat:no-repeat;
 	text-align:center;
+	border: 2px solid black;
 }
 
 .page-title:before{
