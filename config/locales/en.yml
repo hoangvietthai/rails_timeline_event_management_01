@@ -115,6 +115,8 @@ en:
       etiam: "Etiam dignissim sit amet felis ac sagittis. Sed libero arcu,
         pharetra et ante in, elementum scelerisque arcu. Curabitur
         sagittis non justo at ultri"
+    home:
+      home: "Home"
   users:
     log_false: "Log In false"
     please_check_email: "Please check email"
@@ -188,3 +190,17 @@ en:
     pass_reseted: "Password has been reset."
     reset_danger: "Password reset has expired."
     error: "Occur error!"
+  events:
+    new:
+      create_new_event: "Create New Event"
+    form:
+      close: "Close"
+      public: "public"
+      private: "private"
+      v_gravity: "very gravity"
+      normal: "normal"
+      v_normal: "very normal"
+      gravity: "gravity"
+    create:
+      create_ok: "Create new event successful!"
+    event_not: "Event not found!"

@@ -1,6 +1,9 @@
 $state-danger-text: #ff2128;
 $blue: #3fbc3e;
 $blue1: #1e7625;
+$green: #0F9E5E;
+$calendar_border: #bbff99;
+$calendar_color: #407508;
 
 .error_explanation {
   color: red;
@@ -42,7 +45,26 @@ $blue1: #1e7625;
   background-color: $blue;
   font-weight: bold;
 
-  &:hover{
+  &:hover {
+    color: white;
+    background-color: $blue1;
+  }
+}
+
+.calendar {
+  background-color: white;
+  color: $calendar_color;
+  font-weight: bold;
+  border: $calendar_border solid 1px;
+}
+
+.btn {
+  background-color: $green;
+  color: white;
+  font-weight: bold;
+  border-radius: 15px;
+
+  &:hover {
     color: white;
     background-color: $blue1;
   }

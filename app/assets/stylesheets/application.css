@@ -27,6 +27,7 @@
  *= require font-awesome
  *= require jquery.timepicker
  *= require jquery-ui
+ *= require fullcalendar
  *= require_tree .
  *= require_self
  */
