@@ -72,10 +72,13 @@
               </li>
               <li id="noti_Container" class="notiplus">
                 <div id="noti_Counter"></div>
-                <i id="noti_Button" class="fa fa-envelope-open" aria-hidden="true"></i>
+                <i id="noti_Button" class="fa fa-bell" aria-hidden="true"></i>
                 <div id="notifications">
                   <h3 class="noti1"><%= t ".noti" %></h3>
-                  <div class="noti2"></div>
+                  <ul class="list-group">
+                    <li class="list-group-item"></li>
+                    <li class="list-group-item"></li>
+                  </ul>
                 </div>
               </li>
               <% if logged_in? %>
