@@ -14,6 +14,7 @@ class EventsController < ApplicationController
   def create
     @event = Event.new event_params
     if @event.save
+      @event.create_notification notify_before: Settings.notify_before.time.hours
       flash[:success] = t ".create_ok"
       redirect_to home_path
     else
