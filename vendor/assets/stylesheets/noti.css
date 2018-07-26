@@ -69,3 +69,20 @@
     font-weight:bold;
     margin:3px 0;
 }
+
+.noti_form{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+.noti_form1{
+    font-size: 15px;
+    font-weight: bold;
+    color: red;
+}
+
+.noti_form2 {
+  display: inline-flex;
+}
+

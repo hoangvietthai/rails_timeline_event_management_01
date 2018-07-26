@@ -76,8 +76,63 @@
                 <div id="notifications">
                   <h3 class="noti1"><%= t ".noti" %></h3>
                   <ul class="list-group">
-                    <li class="list-group-item"></li>
-                    <li class="list-group-item"></li>
+                    <% current_user.notification.each do |notification| %>
+                      <% if notification.event.time_to < Time.now %>
+                      <li class="list-group-item list-group-item-success" id="notigroup">
+                      <ul>
+                        <li class="noti_form2">
+                          <h4 class="noti_form"><%= t ".place" %></h4>
+                          <h4 class="noti_form1">
+                            <%= notification.event.place %></h4>
+                        </li>
+                        <br>
+                        <li class="noti_form2">
+                          <h4 class="noti_form"><%= t ".message" %></h4>
+                          <h4 class="noti_form1">
+                            <%= notification.event.description %></h4>
+                        </li>
+                        <br>
+                         <li class="noti_form2">
+                           <h4 class="noti_form"><%= t ".from" %></h4>
+                           <h4 class="noti_form1">
+                             <%= notification.event.time_from %></h4>
+                         </li>
+                        <li class="noti_form2">
+                          <h4 class="noti_form"><%= t ".to" %></h4>
+                          <h4 class="noti_form1">
+                            <%= notification.event.time_to %></h4>
+                        </li>
+                       </ul>
+                    </li>
+                    <%else %>
+                    <li class="list-group-item list-group-item-danger" id="notigroup">
+                      <ul>
+                        <li class="noti_form2">
+                          <h4 class="noti_form"><%= t ".place" %></h4>
+                          <h4 class="noti_form1">
+                            <%= notification.event.place %></h4>
+                        </li>
+                        <br>
+                        <li class="noti_form2">
+                          <h4 class="noti_form"><%= t ".message" %></h4>
+                          <h4 class="noti_form1">
+                            <%= notification.event.description %></h4>
+                        </li>
+                        <br>
+                         <li class="noti_form2">
+                           <h4 class="noti_form"><%= t ".from" %></h4>
+                           <h4 class="noti_form1">
+                             <%= notification.event.time_from %></h4>
+                         </li>
+                        <li class="noti_form2">
+                          <h4 class="noti_form"><%= t ".to" %></h4>
+                          <h4 class="noti_form1">
+                            <%= notification.event.time_to %></h4>
+                        </li>
+                       </ul>
+                    </li>
+                    <% end %>
+                    <% end %>
                   </ul>
                 </div>
               </li>

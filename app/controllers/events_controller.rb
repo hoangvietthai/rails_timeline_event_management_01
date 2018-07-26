@@ -12,9 +12,10 @@ class EventsController < ApplicationController
   def edit; end
 
   def create
-    @event = Event.new event_params
+    @event = current_user.events.build event_params
     if @event.save
-      @event.create_notification notify_before: Settings.notify_before.time.hours
+      UserEvent.create event: @event, user: current_user
+      @event.create_notification notify_before: 2.hours
       flash[:success] = t ".create_ok"
       redirect_to home_path
     else

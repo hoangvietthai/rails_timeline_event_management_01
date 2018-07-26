@@ -1,8 +1,11 @@
 class User < ApplicationRecord
   has_many :user_events
+  has_many :events, through: :user_events
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save :downcase_email
   before_create :create_activation_digest
+
+  accepts_nested_attributes_for :events
 
   VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
   validates :email, presence: true,
@@ -27,6 +30,10 @@ class User < ApplicationRecord
     def new_token
       SecureRandom.urlsafe_base64
     end
+  end
+
+  def notification
+    events.map(&:notification)
   end
 
   def remember
