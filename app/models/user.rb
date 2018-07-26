@@ -45,10 +45,11 @@ class User < ApplicationRecord
   end
 
   def get_notis
-    notis = Array.new
-    event_dontdeadline.each do |notification|
-      notis.push notification.id
-    end
+    event_dontdeadline.map{|ev| ev.notification.id}
+  end
+
+  def get_notied
+    event_deadline.map{|ev| ev.notification.id}
   end
 
   def remember

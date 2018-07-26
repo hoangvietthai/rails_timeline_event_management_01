@@ -1,66 +1,114 @@
 <li id="noti_Container" class="notiplus">
 <div id="noti_dont" data-noti="<%= current_user.get_notis %>" ></div>
   <div id="noti_Counter"><%= current_user.count_notification %></div>
+  <div id="noti_dont" data-noti="<%= current_user.get_notis %>" ></div>
   <i id="noti_Button" class="fa fa-bell" aria-hidden="true"></i>
   <div id="notifications">
     <h3 class="noti1"><%= t ".noti" %></h3>
     <ul class="list-group list_fix">
       <% current_user.event_dontdeadline.each do |notification| %>
-        <li class="list-group-item list-group-item-danger" id="notigroup">
-        <ul>
-          <li class="noti_form2">
-            <h4 class="noti_form"><%= t ".place" %></h4>
-            <h4 class="noti_form1">
-              <%= notification.place %></h4>
+        <button id="<%= notification.id %>" type="button" data-toggle="modal" data-target="#myModal"
+          data-description="<%= notification.description %>"
+          data-place="<%= notification.place %>"
+          data-start="<%= notification.time_from %>"
+          data-end="<%= notification.time_to %>"
+          data-visibility="<%= notification.visibility %>"
+          data-importance="<%= notification.importance %>"
+          data-remind="<%= notification.remind %>">
+          <li class="list-group-item list-group-item-success" id="notigroup">
+          <ul>
+            <li class="noti_form2">
+              <h4 class="noti_form"><%= t "layouts.header.message" %></h4>
+              <h4 class="noti_form1">
+                <%= notification.description %></h4>
+            </li>
+            <br>
+            <li class="noti_form2">
+              <h4 class="noti_form"><%= t "layouts.header.place" %></h4>
+              <h4 class="noti_form1">
+                <%= notification.place %></h4>
+            </li>
+            <br>
+            <li class="noti_form2">
+              <h4 class="noti_form"><%= t "layouts.header.from" %></h4>
+              <h4 class="noti_form1">
+                <%= notification.time_from %></h4>
+            </li>
+            <li class="noti_form2">
+              <h4 class="noti_form"><%= t "layouts.header.to" %></h4>
+              <h4 class="noti_form1">
+                <%= notification.time_to %></h4>
+            </li>
+          </ul>
           </li>
-          <br>
-          <li class="noti_form2">
-            <h4 class="noti_form"><%= t ".message" %></h4>
-            <h4 class="noti_form1">
-              <%= notification.description %></h4>
-          </li>
-          <br>
-           <li class="noti_form2">
-             <h4 class="noti_form"><%= t ".from" %></h4>
-             <h4 class="noti_form1">
-               <%= notification.time_from %></h4>
-           </li>
-          <li class="noti_form2">
-            <h4 class="noti_form"><%= t ".to" %></h4>
-            <h4 class="noti_form1">
-              <%= notification.time_to %></h4>
-          </li>
-         </ul>
-      </li>
+        </button>
       <% end %>
+      <div id="notied" data-noti="<%= current_user.get_notied %>" ></div>
       <% current_user.event_deadline.each do |notification| %>
-      <li class="list-group-item list-group-item-success" id="notigroup">
-        <ul>
-          <li class="noti_form2">
-            <h4 class="noti_form"><%= t ".place" %></h4>
-            <h4 class="noti_form1">
-              <%= notification.place %></h4>
-          </li>
-          <br>
-          <li class="noti_form2">
-            <h4 class="noti_form"><%= t ".message" %></h4>
-            <h4 class="noti_form1">
-              <%= notification.description %></h4>
-          </li>
-          <br>
-           <li class="noti_form2">
-             <h4 class="noti_form"><%= t ".from" %></h4>
-             <h4 class="noti_form1">
-               <%= notification.time_from %></h4>
-           </li>
-          <li class="noti_form2">
-            <h4 class="noti_form"><%= t ".to" %></h4>
-            <h4 class="noti_form1">
-              <%= notification.time_to %></h4>
-          </li>
-         </ul>
-      </li>
+        <button id="<%= notification.id %>" type="button" data-toggle="modal" data-target="#myModal"
+          data-description="<%= notification.description %>"
+          data-place="<%= notification.place %>"
+          data-start="<%= notification.time_from %>"
+          data-end="<%= notification.time_to %>"
+          data-visibility="<%= notification.visibility %>"
+          data-importance="<%= notification.importance %>"
+          data-remind="<%= notification.remind %>">
+        <li class="list-group-item list-group-item" id="notigroup">
+          <ul>
+            <li class="noti_form2">
+              <h4 class="noti_form"><%= t "layouts.header.message" %></h4>
+              <h4 class="noti_form1">
+                <%= notification.description %></h4>
+            </li>
+            <br>
+            <li class="noti_form2">
+              <h4 class="noti_form"><%= t "layouts.header.place" %></h4>
+              <h4 class="noti_form1">
+                <%= notification.place %></h4>
+            </li>
+            <br>
+            <li class="noti_form2">
+              <h4 class="noti_form"><%= t "layouts.header.from" %></h4>
+              <h4 class="noti_form1">
+                <%= notification.time_from %></h4>
+            </li>
+            <li class="noti_form2">
+              <h4 class="noti_form"><%= t "layouts.header.to" %></h4>
+              <h4 class="noti_form1">
+                <%= notification.time_to %></h4>
+            </li>
+          </ul>
+        </li>
+        </button>
       <% end %>
     </ul>
   </div>
 </li>
+
+<div class="modal fade" id="myModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title"><%= t "layouts.header.event" %></h4>
+      </div>
+      <div class="modal-body">
+            <b><%= t "layouts.header.message" %></b><input type="text" name="eventDes" id="eventDes" value="" readonly/>
+            <hr>
+            <b><%= t "layouts.header.place" %></b><input type="text" name="eventPlace" id="eventPlace" value="" readonly/>
+            <hr>
+            <b><%= t "layouts.header.from" %></b><input type="text" name="eventStart" id="eventStart" value="" readonly/>
+            <hr>
+            <b><%= t "layouts.header.to" %></b><input type="text" name="eventEnd" id="eventEnd" value="" readonly/>
+            <hr>
+            <b><%= t "layouts.header.visibility" %></b><input type="text" name="eventVisibility" id="eventVisibility" value="" readonly/>
+            <hr>
+            <b><%= t "layouts.header.importance" %></b><input type="text" name="eventImportance" id="eventImportance" value="" readonly/>
+            <hr>
+            <b><%= t "layouts.header.remind" %></b><input type="text" name="eventRemind" id="eventRemind" value="" readonly/>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

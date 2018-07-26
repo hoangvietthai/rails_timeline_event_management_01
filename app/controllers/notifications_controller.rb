@@ -6,7 +6,7 @@ class NotificationsController < ApplicationController
   private
   def find_by
     @noti = Notification.find_by id: params[:id]
-    
+
     return if @noti
     flash[:danger] = t ".noti_not"
     redirect_to root_url
