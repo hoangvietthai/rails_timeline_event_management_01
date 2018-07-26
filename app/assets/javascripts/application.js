@@ -34,4 +34,6 @@
 //= require googlemaps
 //= require jquery-ui.min
 //= require script
+//= require moment
+//= require fullcalendar
 //= require_tree .

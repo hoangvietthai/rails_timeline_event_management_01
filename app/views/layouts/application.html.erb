@@ -20,6 +20,7 @@
           <%= content_tag :div, message, class: "alert alert-#{message_type}" %>
         <% end %>
         <%= yield %>
+        <div id = "remote_container"></div>
         <%= render "layouts/footer" %>
       </div>
     </div>
