@@ -204,3 +204,6 @@ en:
     create:
       create_ok: "Create new event successful!"
     event_not: "Event not found!"
+  notifications:
+    show:
+      noti: "Notifications"

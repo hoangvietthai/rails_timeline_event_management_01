@@ -21,7 +21,7 @@ class EventsController < ApplicationController
     end
   end
 
-  def update;  end
+  def update; end
 
   def destroy
     @event.destroy
