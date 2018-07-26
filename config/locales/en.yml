@@ -36,6 +36,7 @@ en:
       profile: "Profile"
       user: "User"
       account: "Account"
+      users: "Users"
   sessions:
     create:
       please_log: "Please Log In"
@@ -132,6 +133,11 @@ en:
       title_signup: "Sign up"
     index:
       users_all: "All users"
+      delete: "Delete"
+      sure: "You sure?"
+      alluser: "All Users"
+      email: "Email"
+      role: "Role"
     edit:
       title: "Update profile"
       save: "save"

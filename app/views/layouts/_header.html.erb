@@ -79,22 +79,27 @@
                 </div>
               </li>
               <% if logged_in? %>
-                <li class="dropdown">
+                <li>
+                  <% if current_user.admin? %>
+                    <%= link_to t(".users"), users_path %>
+                  <% end %>
+                </li>
+                <li class="dropdown appoinment-btn">
                   <%= link_to "#", class: "dropdown-toggle thm-btn pt-5 pb-5", data:{ toggle: "dropdown"} do %>
                     <%= (current_user.email).to_s.split('@').first %><b class="caret"></b>
-                      <% end %>
-                        <ul class="dropdown-menu">
-                          <li>
-                            <%= link_to t(".profile"), current_user %>
-                          </li>
-                          <li>
-                            <%= link_to t(".setting"), edit_user_path(current_user) %>
-                          </li>
-                          <li class="divider"></li>
-                          <li>
-                            <%= link_to t(".logout"), logout_path, method: :delete %>
-                          </li>
-                        </ul>
+                    <% end %>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <%= link_to t(".profile"), current_user %>
+                      </li>
+                      <li>
+                        <%= link_to t(".setting"), edit_user_path(current_user) %>
+                      </li>
+                      <li class="divider"></li>
+                      <li>
+                        <%= link_to t(".logout"), logout_path, method: :delete %>
+                      </li>
+                    </ul>
                 </li>
               <% end %>
             </ul>
