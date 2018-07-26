@@ -137,6 +137,7 @@ en:
       email: "Email Address"
       pass: "Password"
       pass_con: "Confirm Password"
+      back: "Back"
     form:
       email: "Email Address"
       pass: "Password"
@@ -154,6 +155,7 @@ en:
       hi: "Hi"
     password_reset:
       reset: "Password reset"
+      back: "Back"
       click_pls: "To reset your password click the link below:"
       reset_btn: "Reset password"
       expire_msg: "This link will expire in two hours."
