@@ -1,4 +1,5 @@
 /*
+ *= require admin
  *= require sb-admin-2
  *= require dataTables.bootstrap
  *= require dataTables.responsive
@@ -34,6 +35,8 @@
  *= require daterangepicker
  *= require jquery-ui
  *= require fullcalendar
+ *= remodal-default-theme
+ *= require remodal
  *= require_tree .
  *= require_self
  */

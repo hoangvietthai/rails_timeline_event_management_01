@@ -16,9 +16,9 @@ en:
         dignissim elit, sit amet cursus massa tortor eget ante."
       call: "Call Us Anytime"
       sdt: "(+064)-342-68372"
-      email: "Email Us At"
-      nam: "2018 &copy; Garden-Plants Service."
-      info: "info@garden-care.com"
+      email: "Email VN At"
+      nam: "2018 &copy; Timeline"
+      info: "framgia@gmail.com"
     header:
       place: "Place :"
       message: "Message :"
@@ -27,7 +27,7 @@ en:
       hellow: "Hello, Welcome to Timeline Team, Inc."
       nam1: "(+064)-342-27582"
       nam2: "9am - 5pm"
-      nam3: "info@timeline-care.com"
+      nam3: "framgia@gmail.com"
       nam4: "Find us on map"
       home: "Home"
       help: "Help"
@@ -46,7 +46,7 @@ en:
       hellow: "Hello, Welcome to Timeline Team, Inc."
       nam1: "(+064)-342-27582"
       nam2: "9am - 5pm"
-      nam3: "info@timeline-care.com"
+      nam3: "framgia@gmail.com"
       nam4: "Find us on map"
   sessions:
     create:

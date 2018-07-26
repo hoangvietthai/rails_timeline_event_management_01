@@ -71,6 +71,16 @@ initialize_calendar = function () {
                 });
             }
         });
-    })
+    });
+
+    var noti_dont = $('#noti_dont').data('noti');
+    $.each(noti_dont, function(i, id){
+        var s = '#' + id;
+        $(s).click(function() {
+            $.getScript('/notifications/' + id, function () {
+                alert(id);
+            });
+        });
+    });
 };
 $(document).on('turbolinks:load', initialize_calendar);

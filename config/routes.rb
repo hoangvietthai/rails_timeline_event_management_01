@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  get "notifications/show"
   get "/home", to: "static_pages#home"
   get "/help", to: "static_pages#help"
   get "/about", to: "static_pages#about"
@@ -13,6 +12,7 @@ Rails.application.routes.draw do
   resources :account_activations, only: :edit
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :events
+  resources :notifications, only: :show
 
   namespace :admin do
     root to: "static_pages#index"

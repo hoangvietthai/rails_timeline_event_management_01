@@ -36,6 +36,6 @@ $(document).on('turbolinks:load', function () {
         });
 
         $('#notifications').click(function () {
-            return false;       // DO NOTHING WHEN CONTAINER IS CLICKED.
+            // return false;       // DO NOTHING WHEN CONTAINER IS CLICKED.
         });
     });
