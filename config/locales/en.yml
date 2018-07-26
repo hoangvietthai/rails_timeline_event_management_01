@@ -202,7 +202,7 @@ en:
     error: "Occur error!"
   events:
     new:
-      create_new_event: "Create New Event"
+      create_new_event: "New Event"
     form:
       close: "Close"
       public: "public"
@@ -211,6 +211,7 @@ en:
       normal: "normal"
       v_normal: "very normal"
       gravity: "gravity"
+      add_event_btn: "Add Event"
     create:
       create_ok: "Create new event successful!"
     event_not: "Event not found!"

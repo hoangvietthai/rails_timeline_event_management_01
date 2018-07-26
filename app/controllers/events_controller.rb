@@ -1,7 +1,9 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
-  def index; end
+  def index
+    @events = Event.where time_from: params[:start], time_to: params[:end]
+  end
 
   def show; end
 
@@ -19,7 +21,6 @@ class EventsController < ApplicationController
         (@event.time_from - Settings.later.hours)
       current_user.send_mail_notification @event
       flash[:success] = t ".create_ok"
-      redirect_to home_path
     else
       render :new
     end
