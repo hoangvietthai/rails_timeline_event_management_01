@@ -71,7 +71,7 @@
                 <%= link_to t(".help"), help_path %>
               </li>
               <li id="noti_Container" class="notiplus">
-                <div id="noti_Counter"></div>
+                <div id="noti_Counter"><%= current_user.count_notification %></div>
                 <i id="noti_Button" class="fa fa-bell" aria-hidden="true"></i>
                 <div id="notifications">
                   <h3 class="noti1"><%= t ".noti" %></h3>

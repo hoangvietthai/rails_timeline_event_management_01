@@ -36,6 +36,10 @@ class User < ApplicationRecord
     events.map(&:notification)
   end
 
+  def count_notification
+    events.count{|i| i.time_to > Time.now}
+  end
+
   def remember
     self.remember_token = User.new_token
     update_attributes remember_digest: User.digest(remember_token)
