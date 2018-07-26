@@ -1,38 +1,39 @@
 <div class="p-30">
   <%= form_for @event, remote: true do |f| %>
-    <% flash.each do |message_type, message| %>
-      <%= content_tag :div, message, class: "alert alert-#{message_type}" %>
-    <% end %>
     <%= render "shared/error_messages", object: f.object %>
-    <%= f.label :description %>
-    <%= f.text_field :description, class: "form-control" %>
-    <div class="form-group mt-30">
-      <%= f.label :time_from %>
-      <%= f.datetime_select :time_from, class: "form-control" %>
+    <div class="form-group modalbox">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: "form-control" %>
     </div>
-    <div class="form-group mt-30">
-      <%= f.label :time_to %>
-      <%= f.datetime_select :time_to, class: "form-control" %>
-    </div>
-    <div class="form-group mt-30">
+    <div class="form-group modalbox">
       <%= f.label :place %>
       <%= f.text_field :place, class: "form-control" %>
     </div>
-    <div class="form-group mt-30">
-      <%= f.label :remind %>
-      <%= f.check_box :remind, {checked: true}, data: {toggle: "toggle"}, class: "checkbox-inline" %>
+    <div class="form-group mt-30 time-select-2">
+      <%= f.label :time_from %>
+      <%= f.text_field :time_from, class: "form-control start_hidden date-range-picker" %>
     </div>
-    <div class="form-group mt-30">
+    <div class="form-group mt-30 time-select-2">
+      <%= f.label :time_to %>
+      <%= f.text_field :time_to, class: "form-control end_hidden date-range-picker" %>
+    </div>
+    <div class="form-group mt-30 time-select-1">
       <%= f.label :visibility %>
       <%= f.select :visibility, [[t(".public"), t(".public")], [t(".private"), t(".private")]], class: "form-control" %>
     </div>
-    <div class="form-group mt-30">
+    <div class="form-group mt-30 time-select-3">
       <%= f.label :importance %>
-      <%= f.select :importance, [[t(".v_gravity"), t(".v_gravity")], [t(".gravity"), t(".gravity")], [t(".normal"), t(".normal")], [t(".v_normal"), t(".v_normal")]], class: "form-control" %>
+      <%= f.select :importance, [[t(".v_gravity"), t(".v_gravity_color")], [t(".gravity"), t(".gravity_color")], [t(".normal"), t(".normal_color")], [t(".v_normal"), t(".v_normal_color")]], class: "form-control" %>
+    </div>
+    <div class="form-group mt-30 modalbox-1">
+      <%= f.label :remind %>
+      <%= f.check_box :remind, {checked: true}, data: {toggle: "toggle"}, class: "checkbox-inline" %>
     </div>
     <div class="modal-footer">
-      <%= f.button :submit, class: "btn btn-primary" %>
+      <%= f.submit t(".add_event_btn"), class: "btn btn-color btn-md btn-signup" %>
+      <%= link_to t(".delete"), event, method: :delete, class: "btn btn-danger",
+        data: { confirm: t(".confirm") }, remote: true unless @event.new_record? %>
   <% end %>
-  <button type="button" class="btn btn-danger" data-dismiss="modal"><%= t ".close" %></button>
+  <button type="button" class="btn btn-close" data-dismiss="modal"><%= t ".close" %></button>
   </div>
 </div>

@@ -1,7 +1,9 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
-  def index; end
+  def index
+    @events = Event.select :description, :time_from, :time_to, :importance, :place
+  end
 
   def show; end
 
@@ -15,11 +17,8 @@ class EventsController < ApplicationController
     @event = current_user.events.build event_params
     if @event.save
       UserEvent.create event: @event, user: current_user
-      @event.create_notification notify_before:
-        (@event.time_from - Settings.later.hours)
+      @event.create_notification notify_before: @event.get_notify_before
       current_user.send_mail_notification @event
-      flash[:success] = t ".create_ok"
-      redirect_to home_path
     else
       render :new
     end

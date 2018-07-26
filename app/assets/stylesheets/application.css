@@ -26,6 +26,7 @@
  *= require jquery.mCustomScrollbar.min
  *= require font-awesome
  *= require jquery.timepicker
+ *= require daterangepicker
  *= require jquery-ui
  *= require fullcalendar
  *= require_tree .

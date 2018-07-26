@@ -7,3 +7,5 @@ password:
   expired: 2
 notify_before:
   time: 2
+time:
+  zone: 7

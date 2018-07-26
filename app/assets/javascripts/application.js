@@ -35,5 +35,8 @@
 //= require jquery-ui.min
 //= require script
 //= require moment
+//= require moment/ja.js
 //= require fullcalendar
+//= require bootstrap-datetimepicker
+//= require daterangepicker
 //= require_tree .

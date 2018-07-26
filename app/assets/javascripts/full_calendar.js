@@ -19,16 +19,32 @@ initialize_calendar = function () {
 
             select: function (start, end) {
                 $.getScript('/events/new', function () {
+                    $('.date-range-picker').daterangepicker({
+                        singleDatePicker: true,
+                        timePicker: true,
+                        applyButtonClasses: 'btn btn-color btn-md btn-signup',
+                        cancelButtonClasses: 'btn btn-close',
+                        drops: 'up',
+                        locale: {
+                            format: 'M/DD hh:mm A'
+                        }
+                    });
+                    time_from = $('.start_hidden');
+                    time_to = $('.end_hidden')
+                    value1 = moment(start).format('M/DD hh:mm A');
+                    value2 = moment(end).format('M/DD hh:mm A');
+                    time_from.val(value1);
+                    time_to.val(value2);
                 });
-
+                calendar.fullCalendar('unselect');
             },
 
             eventDrop: function (event, delta, revertFunc) {
                 event_data = {
                     event: {
                         id: event.id,
-                        start: event.start.format(),
-                        end: event.end.format()
+                        start: event.time_from.format(),
+                        end: event.time_to.format()
                     }
                 };
                 $.ajax({
