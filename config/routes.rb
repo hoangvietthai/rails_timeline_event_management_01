@@ -13,4 +13,9 @@ Rails.application.routes.draw do
   resources :account_activations, only: :edit
   resources :password_resets, only: [:new, :create, :edit, :update]
   resources :events
+
+  namespace :admin do
+    root to: "static_pages#index"
+    get "/static_pages/tables", to: "static_pages#tables", as: "showuser"
+  end
 end

@@ -1,3 +1,13 @@
+//= require raphael.min
+//= require sb-admin-2
+//= require jquery.dataTables.min
+//= require jquery.min
+//= require morris-data
+//= require morris.min
+//= require dataTables.bootstrap.min
+//= require dataTables.responsive
+//= require jquery.dataTables.min
+//= require metisMenu.min
 //= require app
 //= require backstretch
 //= require dropzone
@@ -35,7 +45,6 @@
 //= require jquery-ui.min
 //= require script
 //= require moment
-//= require moment/ja.js
 //= require fullcalendar
 //= require bootstrap-datetimepicker
 //= require daterangepicker

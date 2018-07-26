@@ -34,7 +34,7 @@ class EventsController < ApplicationController
   end
 
   def destroy
-  return if @event.destroy
+    return if @event.destroy
     flash[:warning] = t ".delete_fail"
     redirect_to root_path
   end

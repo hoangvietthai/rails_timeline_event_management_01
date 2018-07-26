@@ -28,7 +28,11 @@ class SessionsController < ApplicationController
     if user.activated?
       log_in user
       remember_user user
-      redirect_back_or user
+      if user.admin?
+        redirect_to admin_root_path
+      else
+        redirect_back_or home_path
+      end
     else
       flash[:warning] = t ".cannot"
       redirect_to root_url

@@ -1,4 +1,9 @@
 /*
+ *= require sb-admin-2
+ *= require dataTables.bootstrap
+ *= require dataTables.responsive
+ *= require metisMenu.min
+ *= require morris
  *= require default
  *= require animate.min
  *= require dropzone
