@@ -89,6 +89,25 @@ a{
 	cursor:pointer;
 	color:#4c55aa;
 }
+.modal-body .form-horizontal .col-sm-2,
+.modal-body .form-horizontal .col-sm-10 {
+    width: 100%
+}
+
+.modal-body .form-horizontal .control-label {
+    text-align: left;
+}
+.modal-body .form-horizontal .col-sm-offset-2 {
+    margin-left: 15px;
+}
+
+.modal-content {
+    background-color: #eeeeee;
+}
+
+.btn-custom {
+    color: #428bca;
+}
 
 a:hover,a:focus,a:visited{
 	text-decoration:none;
@@ -132,6 +151,12 @@ p{
 	min-width:320px;
 	min-height:500px;
 
+}
+
+.fix_icon {
+  font-size: 20px !important;
+  padding-top: 10px !important;
+  color: green;
 }
 
 ul,li{
@@ -628,11 +653,11 @@ ul,li{
 .main-menu .navigation > li > a{
 	position:relative;
 	display:block;
-	padding:10px 10px;
+	padding:8px 8px;
 	font-size:14px;
 	color:#6aaf08;
 	line-height:20px;
-	font-weight:700;
+	font-weight:bold;
 	text-transform:uppercase;
 	opacity:1;
 	transition:all 500ms ease;

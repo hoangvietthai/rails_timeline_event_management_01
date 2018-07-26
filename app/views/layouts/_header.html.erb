@@ -70,8 +70,16 @@
               <li>
                 <%= link_to t(".help"), help_path %>
               </li>
+              <li id="noti_Container" class="notiplus">
+                <div id="noti_Counter"></div>
+                <i id="noti_Button" class="fa fa-envelope-open" aria-hidden="true"></i>
+                <div id="notifications">
+                  <h3 class="noti1"><%= t ".noti" %></h3>
+                  <div class="noti2"></div>
+                </div>
+              </li>
               <% if logged_in? %>
-                <li class="dropdown appoinment-btn">
+                <li class="dropdown">
                   <%= link_to "#", class: "dropdown-toggle thm-btn pt-5 pb-5", data:{ toggle: "dropdown"} do %>
                     <%= (current_user.email).to_s.split('@').first %><b class="caret"></b>
                       <% end %>
@@ -88,8 +96,8 @@
                           </li>
                         </ul>
                 </li>
+              <% end %>
             </ul>
-            <% end %>
           </div>
         </nav>
       </div>

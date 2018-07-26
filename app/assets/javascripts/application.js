@@ -20,6 +20,7 @@
 //= require typed.min
 //= require wow.min
 //= require rails-ujs
+//= require noti
 //= require jquery
 //= require bootstrap
 //= require activestorage
