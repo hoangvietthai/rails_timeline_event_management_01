@@ -20,6 +20,10 @@ en:
       nam: "2018 &copy; Garden-Plants Service."
       info: "info@garden-care.com"
     header:
+      place: "Place:"
+      message: "Message:"
+      from: "From:"
+      to: "To:"
       hellow: "Hello, Welcome to Timeline Team, Inc."
       nam1: "(+064)-342-27582"
       nam2: "9am - 5pm"
