@@ -6,23 +6,29 @@
     <%= render "shared/error_messages", object: f.object %>
     <%= f.label :description %>
     <%= f.text_field :description, class: "form-control" %>
-    <%= f.label :time_from %>
-    <%= f.date_field :time_from, class: "form-control" %>
-    <%= f.label :time_to %>
-    <%= f.date_field :time_to, class: "form-control" %>
-    <%= f.label :place %>
-    <%= f.text_field :place, class: "form-control" %>
+    <div class="form-group mt-30">
+      <%= f.label :time_from %>
+      <%= f.datetime_select :time_from, class: "form-control" %>
+    </div>
+    <div class="form-group mt-30">
+      <%= f.label :time_to %>
+      <%= f.datetime_select :time_to, class: "form-control" %>
+    </div>
+    <div class="form-group mt-30">
+      <%= f.label :place %>
+      <%= f.text_field :place, class: "form-control" %>
+    </div>
     <div class="form-group mt-30">
       <%= f.label :remind %>
       <%= f.check_box :remind, {checked: true}, data: {toggle: "toggle"}, class: "checkbox-inline" %>
     </div>
     <div class="form-group mt-30">
       <%= f.label :visibility %>
-      <%= f.select :visibility, [[t(".public"), t(".public")], [ t(".private"), t(".private")]  ], class: "form-control" %>
+      <%= f.select :visibility, [[t(".public"), t(".public")], [t(".private"), t(".private")]], class: "form-control" %>
     </div>
     <div class="form-group mt-30">
       <%= f.label :importance %>
-      <%= f.select :importance, [[t(".very gravity"), t(".very gravity")], [t(".gravity"), t(".gravity")], [t(".normal"), t(".normal")], [t(".v_normal"), t(".v_normal")]], class: "form-control" %>
+      <%= f.select :importance, [[t(".v_gravity"), t(".v_gravity")], [t(".gravity"), t(".gravity")], [t(".normal"), t(".normal")], [t(".v_normal"), t(".v_normal")]], class: "form-control" %>
     </div>
     <div class="modal-footer">
       <%= f.button :submit, class: "btn btn-primary" %>
