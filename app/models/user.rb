@@ -77,6 +77,11 @@ class User < ApplicationRecord
     reset_sent_at < Settings.password.expired.hours.ago
   end
 
+  def send_mail_notification event
+    UserMailer.post_notice(self, event).deliver_later! until:
+      event.notification.notify_before
+  end
+
   private
 
   def downcase_email

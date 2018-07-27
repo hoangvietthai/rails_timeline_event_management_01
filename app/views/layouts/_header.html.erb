@@ -75,7 +75,7 @@
                 <i id="noti_Button" class="fa fa-bell" aria-hidden="true"></i>
                 <div id="notifications">
                   <h3 class="noti1"><%= t ".noti" %></h3>
-                  <ul class="list-group">
+                  <ul class="list-group list_fix">
                     <% current_user.notification.each do |notification| %>
                       <% if notification.event.time_to < Time.now %>
                       <li class="list-group-item list-group-item-success" id="notigroup">
@@ -144,7 +144,7 @@
                 </li>
                 <li class="dropdown appoinment-btn">
                   <%= link_to "#", class: "dropdown-toggle thm-btn pt-5 pb-5", data:{ toggle: "dropdown"} do %>
-                    <%= (current_user.email).to_s.split('@').first %><b class="caret"></b>
+                    <%= first_part_of current_user.email %><b class="caret"></b>
                     <% end %>
                     <ul class="dropdown-menu">
                       <li>

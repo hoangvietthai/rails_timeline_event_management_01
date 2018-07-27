@@ -20,9 +20,9 @@ en:
       nam: "2018 &copy; Garden-Plants Service."
       info: "info@garden-care.com"
     header:
-      place: "Place:"
-      message: "Message:"
-      from: "From:"
+      place: "Place : "
+      message: "Message : "
+      from: "From : "
       to: "To:"
       hellow: "Hello, Welcome to Timeline Team, Inc."
       nam1: "(+064)-342-27582"
@@ -166,6 +166,12 @@ en:
       activate: "Activate"
       mail_message: "Welcome to the Sample App! Click on the link below to activate your account:"
       hi: "Hi"
+    post_notice:
+      hello: "Hello "
+      event_at: "Event at "
+      is_only: " is only 2 hours is to come, you pay attention "
+      notice_of_deadline: "Notice of Deadline "
+      event: "Event "
     password_reset:
       reset: "Password reset"
       back: "Back"
