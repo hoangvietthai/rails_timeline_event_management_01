@@ -19,16 +19,20 @@ initialize_calendar = function () {
 
             select: function (start, end) {
                 $.getScript('/events/new', function () {
+                    $('#event_date_range').val(moment(start).format("MM/DD/YYYY HH:mm") + ' - ' + moment(end).format("MM/DD/YYYY HH:mm"))
+                    date_range_picker();
+                    $('.start_hidden').val(moment(start).format('YYYY-MM-DD HH:mm'));
+                    $('.end_hidden').val(moment(end).format('YYYY-MM-DD HH:mm'));
                 });
-
+                calendar.fullCalendar('unselect');
             },
 
             eventDrop: function (event, delta, revertFunc) {
                 event_data = {
                     event: {
                         id: event.id,
-                        start: event.start.format(),
-                        end: event.end.format()
+                        start: event.time_from.format(),
+                        end: event.time_to.format()
                     }
                 };
                 $.ajax({
