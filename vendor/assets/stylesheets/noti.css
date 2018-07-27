@@ -30,7 +30,7 @@
 
 #notifications {
   display:none;
-  width:430px;
+  width:380px;
   position:absolute;
   top:30px;
   left:0;
@@ -66,19 +66,17 @@
 .notiplus {
     float:left;
     font:13px helvetica;
-    font-weight:bold;
     margin:3px 0;
 }
 
 .noti_form{
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bold;
-    color: black;
+    color: #778899;
 }
 
 .noti_form1{
-    font-size: 15px;
-    font-weight: bold;
+    font-size: 12px;
     color: red;
 }
 
@@ -86,3 +84,8 @@
   display: inline-flex;
 }
 
+.list_fix {
+  height: 400px;
+  width:380px;
+  overflow:auto;
+}

@@ -1,5 +1,6 @@
 max1: 50
 min1: 6
+later: 2
 paginate:
   per_page: 10
 password:
