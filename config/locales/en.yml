@@ -201,6 +201,8 @@ en:
     reset_danger: "Password reset has expired."
     error: "Occur error!"
   events:
+    edit:
+      edit_event: "Edit Event"
     new:
       create_new_event: "New Event"
     form:
@@ -216,6 +218,7 @@ en:
       v_normal_color: "Pink"
       gravity_color: "Blue"
       add_event_btn: "Add Event"
+      update_btn: "Update"
       delete: "Delete"
       confirm: "Are you sure?"
     create:
@@ -223,6 +226,7 @@ en:
     event_not: "Event not found!"
     index:
       home: "Home"
+    delete_fail: "Delete fail"
   notifications:
     show:
       noti: "Notifications"

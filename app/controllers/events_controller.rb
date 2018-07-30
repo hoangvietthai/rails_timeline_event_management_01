@@ -2,7 +2,8 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.select :id, :description, :time_from, :time_to, :importance, :place
+    @events = Event.select :id, :description, :time_from,
+      :time_to, :importance, :place
   end
 
   def show; end
@@ -24,10 +25,18 @@ class EventsController < ApplicationController
     end
   end
 
-  def update; end
+  def update
+    if @event.update_attributes event_params
+      render head: :no_content
+    else
+      render :edit
+    end
+  end
 
   def destroy
-    @event.destroy
+  return if @event.destroy
+    flash[:warning] = t ".delete_fail"
+    redirect_to root_path
   end
 
   private

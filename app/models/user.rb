@@ -1,6 +1,6 @@
 class User < ApplicationRecord
-  has_many :user_events
-  has_many :events, through: :user_events
+  has_many :user_events, dependent: :destroy
+  has_many :events, through: :user_events, dependent: :destroy
   attr_accessor :remember_token, :activation_token, :reset_token
   before_save :downcase_email
   before_create :create_activation_digest
@@ -37,11 +37,11 @@ class User < ApplicationRecord
   end
 
   def event_dontdeadline
-    events.select{ |e| e.time_from > Time.now }
+    events.select{|e| e.time_from > Time.now}
   end
 
   def event_deadline
-    events.select{ |e| e.time_from < Time.now}
+    events.select{|e| e.time_from < Time.now}
   end
 
   def remember
@@ -82,7 +82,8 @@ class User < ApplicationRecord
   end
 
   def send_mail_notification event
-    UserMailer.post_notice(self, event).deliver_later! wait_until: event.notification.notify_before
+    UserMailer.post_notice(self, event).deliver_later! wait_until:
+      event.notification.notify_before
   end
 
   private
