@@ -32,12 +32,16 @@ class User < ApplicationRecord
     end
   end
 
-  def notification
-    events.map(&:notification)
+  def count_notification
+    events.count{|i| i.time_from > Time.now}
   end
 
-  def count_notification
-    events.count{|i| i.time_to > Time.now}
+  def event_dontdeadline
+    events.select{ |e| e.time_from > Time.now }
+  end
+
+  def event_deadline
+    events.select{ |e| e.time_from < Time.now}
   end
 
   def remember

@@ -1,0 +1,65 @@
+<li id="noti_Container" class="notiplus">
+  <div id="noti_Counter"><%= current_user.count_notification %></div>
+  <i id="noti_Button" class="fa fa-bell" aria-hidden="true"></i>
+  <div id="notifications">
+    <h3 class="noti1"><%= t ".noti" %></h3>
+    <ul class="list-group list_fix">
+      <% current_user.event_dontdeadline.each do |notification| %>
+        <li class="list-group-item list-group-item-danger" id="notigroup">
+        <ul>
+          <li class="noti_form2">
+            <h4 class="noti_form"><%= t ".place" %></h4>
+            <h4 class="noti_form1">
+              <%= notification.place %></h4>
+          </li>
+          <br>
+          <li class="noti_form2">
+            <h4 class="noti_form"><%= t ".message" %></h4>
+            <h4 class="noti_form1">
+              <%= notification.description %></h4>
+          </li>
+          <br>
+           <li class="noti_form2">
+             <h4 class="noti_form"><%= t ".from" %></h4>
+             <h4 class="noti_form1">
+               <%= notification.time_from %></h4>
+           </li>
+          <li class="noti_form2">
+            <h4 class="noti_form"><%= t ".to" %></h4>
+            <h4 class="noti_form1">
+              <%= notification.time_to %></h4>
+          </li>
+         </ul>
+      </li>
+      <% end %>
+      <% current_user.event_deadline.each do |notification| %>
+      <li class="list-group-item list-group-item-success" id="notigroup">
+        <ul>
+          <li class="noti_form2">
+            <h4 class="noti_form"><%= t ".place" %></h4>
+            <h4 class="noti_form1">
+              <%= notification.place %></h4>
+          </li>
+          <br>
+          <li class="noti_form2">
+            <h4 class="noti_form"><%= t ".message" %></h4>
+            <h4 class="noti_form1">
+              <%= notification.description %></h4>
+          </li>
+          <br>
+           <li class="noti_form2">
+             <h4 class="noti_form"><%= t ".from" %></h4>
+             <h4 class="noti_form1">
+               <%= notification.time_from %></h4>
+           </li>
+          <li class="noti_form2">
+            <h4 class="noti_form"><%= t ".to" %></h4>
+            <h4 class="noti_form1">
+              <%= notification.time_to %></h4>
+          </li>
+         </ul>
+      </li>
+      <% end %>
+    </ul>
+  </div>
+</li>
