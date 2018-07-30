@@ -44,6 +44,13 @@ class User < ApplicationRecord
     (events.select{|e| e.time_from >= Time.now}).sort_by{|t| t[:time_from]}
   end
 
+  def get_notis
+    notis = Array.new
+    event_dontdeadline.each do |notification|
+      notis.push notification.id
+    end
+  end
+
   def remember
     self.remember_token = User.new_token
     update_attributes remember_digest: User.digest(remember_token)
