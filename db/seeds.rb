@@ -4,7 +4,7 @@ User.create!(email: "dangnhuthuy@gmail.com",
   role: 0,
   activated: true,
   activated_at: Time.zone.now)
-User.create!(email: "buiquangdai@gmail.com",
+User.create!(email: "peiguangda@gmail.com",
   password: "123456",
   password_confirmation: "123456",
   role: 0,

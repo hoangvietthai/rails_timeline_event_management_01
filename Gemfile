@@ -20,10 +20,10 @@ gem "sass-rails", "~> 5.0"
 gem "turbolinks", "~> 5"
 gem "uglifier", ">= 1.3.0"
 
+gem "bootstrap-daterangepicker-rails"
+gem "bootstrap-datetimepicker-rails"
 gem "bootstrap-kaminari-views"
 gem "kaminari"
-gem "bootstrap-datetimepicker-rails"
-gem "bootstrap-daterangepicker-rails"
 
 group :development, :test do
   gem "byebug", platforms: [:mri, :mingw, :x64_mingw]
