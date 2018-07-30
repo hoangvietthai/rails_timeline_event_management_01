@@ -78,8 +78,7 @@ class User < ApplicationRecord
   end
 
   def send_mail_notification event
-    UserMailer.post_notice(self, event).deliver_later! until:
-      event.notification.notify_before
+    UserMailer.post_notice(self, event).deliver_later! wait_until: event.notification.notify_before
   end
 
   private

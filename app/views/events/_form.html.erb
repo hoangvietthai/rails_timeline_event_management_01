@@ -11,11 +11,11 @@
     </div>
     <div class="form-group mt-30 time-select-2">
       <%= f.label :time_from %>
-      <%= f.datetime_select :time_from, class: "form-control" %>
+      <%= f.text_field :time_from, class: "form-control start_hidden date-range-picker" %>
     </div>
     <div class="form-group mt-30 time-select-2">
       <%= f.label :time_to %>
-      <%= f.datetime_select :time_to, class: "form-control" %>
+      <%= f.text_field :time_to, class: "form-control end_hidden date-range-picker" %>
     </div>
     <div class="form-group mt-30 time-select-1">
       <%= f.label :visibility %>
@@ -23,7 +23,11 @@
     </div>
     <div class="form-group mt-30 time-select-3">
       <%= f.label :importance %>
-      <%= f.select :importance, [[t(".v_gravity"), t(".v_gravity")], [t(".gravity"), t(".gravity")], [t(".normal"), t(".normal")], [t(".v_normal"), t(".v_normal")]], class: "form-control" %>
+      <%= f.select :importance, [[t(".v_gravity"), t(".v_gravity_color")], [t(".gravity"), t(".gravity_color")], [t(".normal"), t(".normal_color")], [t(".v_normal"), t(".v_normal_color")]], class: "form-control" %>
+    </div>
+    <div class="form-group mt-30 modalbox-1">
+      <%= f.label :remind %>
+      <%= f.check_box :remind, {checked: true}, data: {toggle: "toggle"}, class: "checkbox-inline" %>
     </div>
     <div class="form-group mt-30 modalbox-1">
       <%= f.label :remind %>
@@ -31,6 +35,8 @@
     </div>
     <div class="modal-footer">
       <%= f.submit t(".add_event_btn"), class: "btn btn-color btn-md btn-signup" %>
+      <%= link_to t(".delete"), event, method: :delete, class: "btn btn-danger",
+        data: { confirm: t(".confirm") }, remote: true unless @event.new_record? %>
   <% end %>
   <button type="button" class="btn btn-close" data-dismiss="modal"><%= t ".close" %></button>
   </div>

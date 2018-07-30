@@ -8,6 +8,10 @@ class Event < ApplicationRecord
   validates :time_to, presence: true
 
   def all_day_event?
-    return true time_from == time_from.midnight && time_to == time_to.midnight ? true : false
+    time_from == time_from.midnight && time_to == time_to.midnight
+  end
+
+  def get_notify_before
+    self.time_from - Settings.later.hours
   end
 end

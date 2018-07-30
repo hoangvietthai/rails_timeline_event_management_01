@@ -211,10 +211,18 @@ en:
       normal: "normal"
       v_normal: "very normal"
       gravity: "gravity"
+      v_gravity_color: "Red"
+      normal_color: "Green"
+      v_normal_color: "Pink"
+      gravity_color: "Blue"
       add_event_btn: "Add Event"
+      delete: "Delete"
+      confirm: "Are you sure?"
     create:
       create_ok: "Create new event successful!"
     event_not: "Event not found!"
+    index:
+      home: "Home"
   notifications:
     show:
       noti: "Notifications"
