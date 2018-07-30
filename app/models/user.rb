@@ -36,12 +36,12 @@ class User < ApplicationRecord
     events.count{|i| i.time_from > Time.now}
   end
 
-  def event_dontdeadline
-    events.select{|e| e.time_from > Time.now}
+  def event_deadline
+    (events.select{|e| e.time_from < Time.now}).sort_by{|t| t[:time_from]}
   end
 
-  def event_deadline
-    events.select{|e| e.time_from < Time.now}
+  def event_dontdeadline
+    (events.select{|e| e.time_from >= Time.now}).sort_by{|t| t[:time_from]}
   end
 
   def remember

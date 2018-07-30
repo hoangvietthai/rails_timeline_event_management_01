@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= full_title yield :title %></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag  "application", media: "all",
+      "data-turbolinks-track": "reload" %>
+    <%= javascript_include_tag "application",
+      "data-turbolinks-track": "reload" %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<header class="main-header" id="main-header">
+  <div class="header-top">
+    <div class="auto-container clearfix">
+      <div class="top-left">
+        <ul class="clearfix">
+          <li>
+            <a href="#"><span class="fa fa-circle">
+              </span> <%= t ".hellow" %>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="top-right">
+        <ul class="clearfix">
+          <li>
+            <%= link_to "#" do %>
+              <span class="fa fa-phone"></span>
+              <%= t ".nam1" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "#" do %>
+              <span class="fa fa-clock-o">
+              </span><%= t ".nam2" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "mailto:noreply@regulator.com" do%>
+              <span class="fa fa-at">
+              </span>
+              <%= t ".nam3" %>
+            <% end %>
+          </li>
+          <li>
+            <%= link_to "mailto:noreply@regulator.com" do%>
+              <span class="fa fa-map-marker">
+              </span>
+              <%= t ".nam4" %>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+<body>
+    <%= yield %>
+</body>
+</html>

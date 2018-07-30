@@ -45,9 +45,8 @@
   <div class="header-lower">
     <div class="auto-container clearfix">
       <div class="outer-box">
-        <div class="logo">
-          <%= image_tag "image.jpeg" %>
-        </div>
+        <div class="">
+          <%= image_tag "freeLogo2.jpeg" , :size => "94x100"%>
         <nav class="main-menu">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -70,13 +69,13 @@
               <li>
                 <%= link_to t(".help"), help_path %>
               </li>
+              <li>
+                <% if current_user.admin? %>
+                  <%= link_to t(".management"), admin_root_path %>
+                <% end %>
+              </li>
               <%= render "layouts/ring" %>
               <% if logged_in? %>
-                <li>
-                  <% if current_user.admin? %>
-                    <%= link_to t(".users"), users_path %>
-                  <% end %>
-                </li>
                 <li class="dropdown appoinment-btn">
                   <%= link_to "#", class: "dropdown-toggle thm-btn pt-5 pb-5", data:{ toggle: "dropdown"} do %>
                     <%= first_part_of current_user.email %><b class="caret"></b>
@@ -98,6 +97,8 @@
             </ul>
           </div>
         </nav>
+
+        </div>
       </div>
     </div>
   </div>

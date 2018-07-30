@@ -20,10 +20,10 @@ en:
       nam: "2018 &copy; Garden-Plants Service."
       info: "info@garden-care.com"
     header:
-      place: "Place : "
-      message: "Message : "
-      from: "From : "
-      to: "To:"
+      place: "Place :"
+      message: "Message :"
+      from: "From :"
+      to: "To :"
       hellow: "Hello, Welcome to Timeline Team, Inc."
       nam1: "(+064)-342-27582"
       nam2: "9am - 5pm"
@@ -41,6 +41,13 @@ en:
       user: "User"
       account: "Account"
       users: "Users"
+      management: "Management"
+    admin_header:
+      hellow: "Hello, Welcome to Timeline Team, Inc."
+      nam1: "(+064)-342-27582"
+      nam2: "9am - 5pm"
+      nam3: "info@timeline-care.com"
+      nam4: "Find us on map"
   sessions:
     create:
       please_log: "Please Log In"
@@ -230,3 +237,13 @@ en:
   notifications:
     show:
       noti: "Notifications"
+  admin: 
+    index:
+      home: "Home"
+      chart: "Chart"
+      user: "Users"
+    tables:
+      home: "Home"
+      chart: "Chart"
+      user: "Users"
+      users: "Users table"
