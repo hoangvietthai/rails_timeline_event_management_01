@@ -29,6 +29,10 @@
       <%= f.label :remind %>
       <%= f.check_box :remind, {checked: true}, data: {toggle: "toggle"}, class: "checkbox-inline" %>
     </div>
+    <div class="form-group mt-30 modalbox-1">
+      <%= f.label :remind %>
+      <%= f.check_box :remind, {checked: true}, data: {toggle: "toggle"}, class: "checkbox-inline" %>
+    </div>
     <div class="modal-footer">
       <%= f.submit t(".add_event_btn"), class: "btn btn-color btn-md btn-signup" %>
       <%= link_to t(".delete"), event, method: :delete, class: "btn btn-danger",
