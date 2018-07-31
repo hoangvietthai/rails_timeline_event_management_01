@@ -502,7 +502,7 @@ ul,li{
 ***/
 
 .main-header{
-	position:relative;
+	position:fixed;
 	left:0px;
 	top:0px;
 	z-index:999;
@@ -512,7 +512,7 @@ ul,li{
 	position:relative;
 	border-bottom:1px solid rgba(0,0,0,0.30);
 	padding:5px 0px;
-	background:#252525;
+	background: #143113;
 }
 .main-header .header-top .top-left{
 	position:relative;
@@ -674,6 +674,9 @@ ul,li{
 	opacity:1;
 }
 .main-menu .navigation > li > ul{
+	color: white;
+	font-weight: bold;
+	background: #346c21;
 	position:absolute;
 	left:0px;
 	top:160%;
@@ -681,7 +684,6 @@ ul,li{
 	padding:0px;
 	border:1px solid #ffffff;
 	z-index:100;
-	background:#6aaf08;
 	visibility:hidden;
 	opacity:0;
 	border-radius:0px 5px 5px 5px;

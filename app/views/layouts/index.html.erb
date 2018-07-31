@@ -37,7 +37,7 @@
                 <span><%= t ".general" %></span>
               </li>
               <li class="sidebar-dropdown">
-                <%= link_to admin_showuser_path do %>
+                <%= link_to admin_show_user_path do %>
                   <i class="fa fa-globe"></i>
                   <span><%= t ".user" %></span>
                 <% end %>
@@ -100,7 +100,7 @@
           <%= link_to "#" do %>
             <i class="fa fa-cog"></i>
           <% end %>
-          <%= link_to "#" do %>
+          <%= link_to logout_path, method: :delete do %>
             <i class="fa fa-power-off"></i>
           <% end %>
         </div>
