@@ -1,9 +1,12 @@
 $state-danger-text: #ff2128;
 $blue: #3fbc3e;
-$blue1: #1e7625;
+$blue1: rgb(9, 84, 6);
 $green: #13b868;
 $calendar_border: #bbff99;
 $calendar_color: #407508;
+$seen_background: #edf2fa;
+$hover_seen: #d5dae2;
+$btn_calendar_background: #346d21;
 
 .error_explanation {
   color: red;
@@ -52,24 +55,30 @@ $calendar_color: #407508;
 }
 
 .calendar {
+  padding: 5px;
   background-color: white;
   color: $calendar_color;
   font-weight: bold;
-  border: $calendar_border solid 1px;
+  box-shadow: 1px 12px 15px 5px rgba(112, 98, 98, 0.32);
+  border-radius: 10px;
+  transition: all ease-in-out 0.35s;
+
+  &:hover{
+    box-shadow: 1px 12px 30px 5px rgba(76, 69, 69, 0.48);
+  }
 }
 
 .fc-prev-button, .fc-next-button, .fc-today-button,
 .fc-month-button, .fc-agendaWeek-button, .fc-agendaDay-button {
-  background-color: $green;
+  background-color: $btn_calendar_background;
   color: white;
   font-weight: bold;
-  border: white solid 2px;
+  border: $btn_calendar_background solid 1px;
   border-radius: 5px;
+  font-family: sans-serif;
 
   &:hover {
-    color: white;
     background-color: $blue1;
-    border: white solid 2px;
   }
 }
 
@@ -97,6 +106,7 @@ $calendar_color: #407508;
 
 .time-select-2 {
   @extend .time-select;
+
   select {
     margin-left: 6%;
     float: right;
@@ -105,6 +115,7 @@ $calendar_color: #407508;
 
 .time-select-1 {
   @extend .time-select;
+
   select {
     float: initial;
     margin-left: 14%;
@@ -113,6 +124,7 @@ $calendar_color: #407508;
 
 .time-select-3 {
   @extend .time-select;
+
   select {
     float: initial;
     margin-left: 11%;
@@ -129,4 +141,54 @@ $calendar_color: #407508;
   background: white;
   border: $green solid 1px;
   border-radius: 6px;
+}
+
+.noti {
+  padding: 3%;
+  border-radius: 2%;
+  max-width: 90%;
+  float: left;
+}
+
+.noti-seen {
+  padding: 3%;
+  border-radius: 2%;
+  max-width: 90%;
+  float: left;
+}
+
+.seen-icon {
+  width: 8%;
+  float: right;
+  padding: 2%;
+  padding-top: 5%;
+}
+
+.stuck {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.details-icon {
+  width: 8%;
+  size: auto;
+  float: right;
+  padding: 2%;
+  padding-top: 6%;
+}
+
+.seen-background {
+  background-color: $seen_background;
+
+  &:hover{
+    background-color: $hover_seen;
+  }
+}
+
+.not-seen-bgr {
+  background-color: white;
+  
+  &:hover{
+    background-color: $seen_background;
+  }
 }
