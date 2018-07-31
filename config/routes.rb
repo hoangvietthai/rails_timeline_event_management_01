@@ -15,7 +15,8 @@ Rails.application.routes.draw do
   resources :notifications, only: :show
 
   namespace :admin do
-    root to: "static_pages#index"
+    root to: "static_pages#tables"
     get "/static_pages/tables", to: "static_pages#tables", as: "showuser"
+    resources :users
   end
 end

@@ -1,6 +1,6 @@
 class Admin::StaticPagesController < AdminsController
-  layout "admin_header", only: [:index, :tables]
-  before_action :find_users, only: [:tables]
+  layout "index", only: :tables
+  before_action :find_users, only: :tables
 
   def index; end
 
