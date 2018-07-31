@@ -66,6 +66,11 @@ en:
       nam2: "9am - 5pm"
       nam3: "framgia@gmail.com"
       nam4: "Find us on map"
+    ring:
+      place: " at "
+      message: "You have a "
+      from: " from "
+      to: " to "
   sessions:
     create:
       please_log: "Please Log In"
@@ -239,8 +244,8 @@ en:
       gravity: "gravity"
       v_gravity_color: "Red"
       normal_color: "Green"
-      v_normal_color: "Pink"
-      gravity_color: "Blue"
+      v_normal_color: "Blue"
+      gravity_color: "Orange"
       add_event_btn: "Add Event"
       update_btn: "Update"
       delete: "Delete"

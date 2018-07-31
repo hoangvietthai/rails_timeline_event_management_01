@@ -1,7 +1,6 @@
+//= require jquery2
 //= require bootstrap
 //= require sb-admin-2
-//= require jquery.min
-//= require jquery
 //= require raphael.min
 //= require ie-emulation-modes-warning
 //= require jquery.countdown
@@ -24,7 +23,6 @@
 //= require noti
 //= require activestorage
 //= require turbolinks
-//= require bootstrap.min
 //= require cable
 //= require calendar-events-data
 //= require js-collection

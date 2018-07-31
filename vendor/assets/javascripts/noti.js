@@ -6,7 +6,7 @@ $(document).on('turbolinks:load', function () {
             .css({ top: '-10px' })
             .animate({ top: '-2px', opacity: 1 }, 500);
 
-            $(document).on('click', '#noti_Button', function () {
+        $('#noti_Button').on('click', function () {
 
             // TOGGLE (SHOW OR HIDE) NOTIFICATION WINDOW.
             $('#notifications').fadeToggle('fast', 'linear', function () {
@@ -15,8 +15,6 @@ $(document).on('turbolinks:load', function () {
                 }
                 // CHANGE BACKGROUND COLOR OF THE BUTTON.
                 else $('#noti_Button').css('background-color', '#ffffff');
-
-
             });
 
             $('#noti_Counter').fadeOut('slow');     // HIDE THE COUNTER.
@@ -36,6 +34,6 @@ $(document).on('turbolinks:load', function () {
         });
 
         $('#notifications').click(function () {
-            // return false;       // DO NOTHING WHEN CONTAINER IS CLICKED.
+            //  return false;       // DO NOTHING WHEN CONTAINER IS CLICKED.
         });
     });
