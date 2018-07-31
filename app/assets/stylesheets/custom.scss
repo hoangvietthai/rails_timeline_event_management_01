@@ -192,3 +192,18 @@ $btn_calendar_background: #346d21;
     background-color: $seen_background;
   }
 }
+
+.btn-drop-down {
+  border: 2px solid $btn_calendar_background;
+  color: $blue;
+  cursor: pointer;
+  padding: 5px 20px !important;
+  transition: all .3s ease-in-out;
+  border-radius: 30px;
+
+  &:hover {
+    text-decoration: none;
+    color: white !important;
+    background-color: $btn_calendar_background ;
+  }
+}

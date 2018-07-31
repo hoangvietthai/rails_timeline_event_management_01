@@ -16,7 +16,7 @@ Rails.application.routes.draw do
 
   namespace :admin do
     root to: "static_pages#tables"
-    get "/static_pages/tables", to: "static_pages#tables", as: "showuser"
+    get "/static_pages/tables", to: "static_pages#tables", as: "show_user"
     resources :users
   end
 end
