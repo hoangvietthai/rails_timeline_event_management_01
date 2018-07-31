@@ -553,6 +553,7 @@ ul,li{
 	float:right;
 }
 .main-header .header-lower{
+	border-bottom: #74ad38 solid 1px;
 	position:relative;
 	padding:0px 0px;
 	background:#ffffff;
@@ -655,7 +656,7 @@ ul,li{
 	display:block;
 	padding:2px 2px;
 	font-size:14px;
-	color:#6aaf08;
+	color: #4f711e;
 	line-height:20px;
 	font-weight:bold;
 	text-transform:uppercase;
@@ -2164,6 +2165,7 @@ ul.list li {
 /* parallax two */
 
 .page-title{
+	border-bottom: #74ad38 solid 1px;
 	position:relative;
 	padding:120px 0px;
 	color:#ffffff;
@@ -2171,7 +2173,6 @@ ul.list li {
 	background-size:cover;
 	background-repeat:no-repeat;
 	text-align:center;
-	border: 2px solid black;
 }
 
 .page-title:before{
