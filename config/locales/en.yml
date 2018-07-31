@@ -1,6 +1,19 @@
 en:
   timeline: "My Timeline"
   layouts:
+    index:
+      online: "Online"
+      admin: "Administrator"
+      general: "General"
+      user: "User"
+      eco: "E-commerce"
+      components: "Components"
+      Charts: "Charts"
+      Maps: "Maps"
+      Extra: "Extra"
+      Calendar: "Calendar"
+      Examples: "Examples"
+      Documentation: "Documentation"
     footer:
       about_garden: "About GARDEN PLATN"
       phase: "Phasellus at quam tristique, cursus tellus vitae, convallis neque. Sed a lacinia sapien. Etiam dignissim sit amet felis ac sagittis. Sed libero arcu, pharetra et ante in elementum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae."
@@ -152,7 +165,6 @@ en:
     index:
       users_all: "All users"
       delete: "Delete"
-      sure: "You sure?"
       alluser: "All Users"
       email: "Email"
       role: "Role"
@@ -242,7 +254,13 @@ en:
   notifications:
     show:
       noti: "Notifications"
-  admin: 
+  admin:
+    static_pages:
+      tables:
+        id: "ID"
+        action: "Action"
+        no1: "NO"
+        sure: "You sure?"
     index:
       home: "Home"
       chart: "Chart"

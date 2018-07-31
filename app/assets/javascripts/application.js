@@ -16,6 +16,7 @@
 //= require leaflet.markercluster
 //= require particles.min
 //= require popper.min
+//= require scroll
 //= require rangeslider
 //= require typed.min
 //= require wow.min
