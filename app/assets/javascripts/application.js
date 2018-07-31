@@ -1,7 +1,7 @@
+//= require bootstrap
 //= require sb-admin-2
 //= require jquery.min
-//= require dataTables.bootstrap.min
-//= require dataTables.responsive
+//= require jquery
 //= require raphael.min
 //= require ie-emulation-modes-warning
 //= require jquery.countdown
@@ -14,7 +14,6 @@
 //= require leaflet-providers
 //= require leaflet
 //= require leaflet.markercluster
-//= require maps
 //= require particles.min
 //= require popper.min
 //= require rangeslider
@@ -22,8 +21,6 @@
 //= require wow.min
 //= require rails-ujs
 //= require noti
-//= require jquery
-//= require bootstrap
 //= require activestorage
 //= require turbolinks
 //= require bootstrap.min
@@ -32,7 +29,6 @@
 //= require js-collection
 //= require revolution.min
 //= require flipclock
-//= require googlemaps
 //= require jquery-ui.min
 //= require script
 //= require moment
@@ -47,6 +43,5 @@
 //= require jquery.dataTables.min
 //= require morris-data
 //= require morris.min
-//= require remodal
-//= require zepto
-//= require remodal.min
+//= require dataTables.bootstrap.min
+//= require dataTables.responsive
