@@ -2169,7 +2169,7 @@ ul.list li {
 .page-title{
 	border-bottom: #74ad38 solid 1px;
 	position:relative;
-	padding:120px 0px;
+	padding:220px 0px;
 	color:#ffffff;
 	background-position:center center;
 	background-size:cover;
@@ -2195,7 +2195,7 @@ ul.list li {
 
 .page-title h1{
 	position:relative;
-	margin-bottom:10px;
+	padding-top: 120px !important;
 	font-size:50px;
 	text-transform:uppercase;
 	font-weight:800;

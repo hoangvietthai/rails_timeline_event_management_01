@@ -161,7 +161,7 @@ $btn_calendar_background: #346d21;
   width: 8%;
   float: right;
   padding: 2%;
-  padding-top: 5%;
+  padding-top: 6%;
 }
 
 .stuck {
@@ -174,7 +174,7 @@ $btn_calendar_background: #346d21;
   size: auto;
   float: right;
   padding: 2%;
-  padding-top: 6%;
+  padding-top: 0;
 }
 
 .seen-background {
@@ -187,7 +187,7 @@ $btn_calendar_background: #346d21;
 
 .not-seen-bgr {
   background-color: white;
-  
+
   &:hover{
     background-color: $seen_background;
   }
