@@ -16,15 +16,17 @@
           data-importance="<%= notification.importance %>"
           data-remind="<%= notification.remind %>">
           <li class="list-group-item row not-seen-bgr" id="notigroup">
-            <div class="noti">
+            <div class="noti col">
                 <h4 class="noti_form1">
                   <%= t ".message" %><b><%= notification.description %></b>
                   <%= t ".place" %><b><%= notification.place %></b></h4>
                   <%= t ".from" %><b><%= notification.time_from.strftime("%d/%m/%y %H:%M") %></b>
                   <%= t ".to" %><b><%= notification.time_to.strftime("%d/%m/%y %H:%M") %></b></h4>
             </div>
-            <%= image_tag "details.svg", class: "details-icon" %>
-            <%= image_tag "seen.svg", class: "seen-icon" %>
+            <div class="col p-20">
+              <%= image_tag "details.svg", class: "details-icon row" %>
+              <%= image_tag "seen.svg", class: "seen-icon row" %>
+            </div>
           </li>
         </button>
       <% end %>
@@ -46,8 +48,10 @@
                 <%= t ".from" %><b><%= notification.time_from.strftime("%d/%m/%y %H:%M") %></b>
                 <%= t ".to" %><b><%= notification.time_to.strftime("%d/%m/%y %H:%M") %></b></h4>
             </div>
-            <%= image_tag "details.svg", class: "details-icon" %>
-            <%= image_tag "seen.svg", class: "seen-icon" %>
+            <div class="col p-20">
+              <%= image_tag "details.svg", class: "details-icon row" %>
+              <%= image_tag "seen.svg", class: "seen-icon row" %>
+            </div>
           </li>
         </button>
       <% end %>
@@ -61,26 +65,68 @@
         <h4 class="modal-title"><%= t "layouts.header.event" %></h4>
       </div>
       <div class="modal-body">
-        <label for="eventDes" class="col-form-label"><%= t "layouts.header.message" %></label>
-        <input type="text" name="eventDes" id="eventDes" value="" readonly/>
+        <div class="row pl-50">
+        <div class="col-md-5">
+          <label for="eventDes" class="col-form-label"><%= t "layouts.header.message" %></label>
+        </div>
+        <div class="col-md-7">
+          <input type="text" name="eventDes" id="eventDes" value="" readonly/>
+        </div>
+        </div>
         <hr>
-        <label for="eventPlace" class="col-form-label"><%= t "layouts.header.place" %></label>
-        <input type="text" name="eventPlace" id="eventPlace" value="" readonly/>
+        <div class="row pl-50">
+        <div class="col-md-5">
+          <label for="eventPlace" class="col-form-label"><%= t "layouts.header.place" %></label>
+        </div>
+        <div class="col-md-7">
+          <input type="text" name="eventPlace" id="eventPlace" value="" readonly/>
+        </div>
+        </div>
         <hr>
-        <label for="eventStart" class="col-form-label"><%= t "layouts.header.from" %></label>
-        <input type="text" name="eventStart" id="eventStart" value="" readonly/>
+         <div class="row pl-50">
+        <div class="col-md-5">
+          <label for="eventStart" class="col-form-label"><%= t "layouts.header.from" %></label>
+        </div>
+        <div class="col-md-7">
+          <input type="text" name="eventStart" id="eventStart" value="" readonly/>
+        </div>
+        </div>
         <hr>
-        <label for="eventEnd" class="col-form-label"><%= t "layouts.header.to" %></label>
-        <input type="text" name="eventEnd" id="eventEnd" value="" readonly/>
+        <div class="row pl-50">
+        <div class="col-md-5">
+          <label for="eventEnd" class="col-form-label"><%= t "layouts.header.to" %></label>
+        </div>
+        <div class="col-md-7">
+          <input type="text" name="eventEnd" id="eventEnd" value="" readonly/>
+        </div>
+        </div>
         <hr>
-        <label for="eventVisibility" class="col-form-label"><%= t "layouts.header.visibility" %></label>
-        <input type="text" name="eventVisibility" id="eventVisibility" value="" readonly/>
+        <div class="row pl-50">
+        <div class="col-md-5">
+          <label for="eventVisibility" class="col-form-label"><%= t "layouts.header.visibility" %></label>
+        </div>
+        <div class="col-md-7">
+          <input type="text" name="eventVisibility" id="eventVisibility" value="" readonly/>
+        </div>
+        </div>
         <hr>
-        <label for="eventImportance" class="col-form-label"><%= t "layouts.header.importance" %></label>
-        <input type="text" name="eventImportance" id="eventImportance" value="" readonly/>
+        <div class="row pl-50">
+        <div class="col-md-5">
+          <label for="eventImportance" class="col-form-label"><%= t "layouts.header.importance" %></label>
+        </div>
+        <div class="col-md-7">
+          <input type="text" name="eventImportance" id="eventImportance" value="" readonly/>
+        </div>
+        </div>
         <hr>
-        <label for="eventRemind" class="col-form-label"><%= t "layouts.header.remind" %></label>
-        <input type="text" name="eventRemind" id="eventRemind" value="" readonly/>
+        <div class="row pl-50">
+        <div class="col-md-5">
+          <label for="eventRemind" class="col-form-label"><%= t "layouts.header.remind" %></label>
+        </div>
+        <div class="col-md-7">
+          <input type="text" name="eventRemind" id="eventRemind" value="" readonly/>
+        </div>
+        </div>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

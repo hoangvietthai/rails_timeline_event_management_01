@@ -22,7 +22,6 @@
 //= require rails-ujs
 //= require noti
 //= require activestorage
-//= require turbolinks
 //= require cable
 //= require calendar-events-data
 //= require js-collection

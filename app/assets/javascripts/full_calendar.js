@@ -91,7 +91,7 @@ var initialize_notification = function () {
             var myEventImportance = $(this).data('importance');
             $(".modal-body #eventImportance").val(myEventImportance);
             var myEventRemind = $(this).data('remind');
-            $(".modal-body #eventRemind").val(myEventRemind ? 'remind' : 'not remind');
+            $(".modal-body #eventRemind").val(myEventRemind ? 'Remind' : 'Not Remind');
         });
     }
 
@@ -107,5 +107,5 @@ var initialize_notification = function () {
         setValueNoti(s)
     });
 }
-$(document).on('turbolinks:load', initialize_calendar);
-$(document).on('turbolinks:load', initialize_notification);
+$(document).ready(initialize_calendar);
+$(document).ready(initialize_notification);
