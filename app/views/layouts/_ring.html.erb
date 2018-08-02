@@ -1,5 +1,4 @@
-<li id="noti_Container" class="notiplus">
-  <div id="noti_dont" data-noti="<%= current_user.get_notis %>"></div>
+
   <div id="noti_Counter"><%= current_user.count_notification %></div>
   <div id="noti_dont" data-noti="<%= current_user.get_notis %>"></div>
   <i id="noti_Button" class="fa fa-bell" aria-hidden="true"></i>
@@ -15,7 +14,7 @@
           data-visibility="<%= notification.visibility %>"
           data-importance="<%= notification.importance %>"
           data-remind="<%= notification.remind %>">
-          <li class="list-group-item row not-seen-bgr" id="notigroup">
+          <li class="list-group-item row seen-background" id="notigroup">
             <div class="noti col">
                 <h4 class="noti_form1">
                   <%= t ".message" %><b><%= notification.description %></b>
@@ -40,7 +39,7 @@
           data-visibility="<%= notification.visibility %>"
           data-importance="<%= notification.importance %>"
           data-remind="<%= notification.remind %>">
-          <li class="list-group-item row seen-background" id="notigroup">
+          <li class="list-group-item row not-seen-bgr" id="notigroup">
             <div class="noti-seen">
               <h4 class="noti_form1">
                 <%= t ".message" %><b><%= notification.description %></b>
@@ -57,7 +56,7 @@
       <% end %>
     </ul>
   </div>
-</li>
+
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
