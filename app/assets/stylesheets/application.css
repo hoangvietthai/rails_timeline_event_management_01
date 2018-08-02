@@ -4,7 +4,6 @@
  *= require dataTables.bootstrap
  *= require dataTables.responsive
  *= require metisMenu.min
- *= require morris
  *= require default
  *= require animate.min
  *= require dropzone
@@ -31,9 +30,7 @@
  *= require revolution-slider
  *= require jquery.mCustomScrollbar.min
  *= require font-awesome
- *= require jquery.timepicker
  *= require daterangepicker
- *= require jquery-ui
  *= require_tree .
  *= require_self
  *= require fullcalendar

@@ -275,3 +275,4 @@ en:
       chart: "Chart"
       user: "Users"
       users: "Users table"
+  time_validate: "is cannot bigger than time_to"
