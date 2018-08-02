@@ -33,7 +33,7 @@ class UsersController < ApplicationController
   def update
     if @user.update_attributes user_params
       flash[:success] = t ".updated"
-      redirect_to @user
+      redirect_to home_path
     else
       render :edit
     end

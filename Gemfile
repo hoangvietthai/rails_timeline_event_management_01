@@ -35,6 +35,11 @@ group :development do
   gem "web-console", ">= 3.3.0"
 end
 
+group :production do
+  gem "pg"
+  gem "rails_12factor"
+end
+
 gem "config"
 gem "rubocop", "~> 0.54.0", require: false
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]

@@ -17,10 +17,6 @@
       <%= f.label :time_to %>
       <%= f.text_field :time_to, class: "form-control end_hidden date-range-picker" %>
     </div>
-    <div class="form-group mt-30 time-select-1">
-      <%= f.label :visibility %>
-      <%= f.select :visibility, [[t(".public"), t(".public")], [t(".private"), t(".private")]], class: "form-control" %>
-    </div>
     <div class="form-group mt-30 time-select-3">
       <%= f.label :importance %>
       <%= f.select :importance, [[t(".v_gravity"), t(".v_gravity_color")], [t(".gravity"), t(".gravity_color")], [t(".normal"), t(".normal_color")], [t(".v_normal"), t(".v_normal_color")]], class: "form-control" %>

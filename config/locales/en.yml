@@ -73,7 +73,7 @@ en:
       to: " to "
   sessions:
     create:
-      please_log: "Please Log In"
+      please_log: "Invalid email or password"
       cannot: "Cannot activated"
     new:
       we: "We make it awesome"
@@ -155,8 +155,6 @@ en:
     log_false: "Log In false"
     please_check_email: "Please check email"
     updated: "Updated"
-    deleted: "Deleted"
-    delete_fail: "Delete fail"
     please_log: "Please LogIn"
     user_not: "User not found"
     new:
@@ -185,7 +183,7 @@ en:
       pass: "Password"
       pass_con: "Confirm Password"
     update:
-      updated: "updated"
+      updated: "User Updated"
   shared:
     error_messages:
       error_noti: "The form contains "
@@ -236,8 +234,6 @@ en:
       create_new_event: "New Event"
     form:
       close: "Close"
-      public: "public"
-      private: "private"
       v_gravity: "very gravity"
       normal: "normal"
       v_normal: "very normal"
@@ -275,4 +271,7 @@ en:
       chart: "Chart"
       user: "Users"
       users: "Users table"
+    users:
+      deleted: "Deleted"
+      delete_fail: "Delete fail"
   time_validate: "is cannot bigger than time_to"
