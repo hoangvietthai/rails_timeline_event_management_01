@@ -107,5 +107,5 @@ var initialize_notification = function () {
         setValueNoti(s)
     });
 }
-$(document).on('turbolinks:load', initialize_calendar);
-$(document).on('turbolinks:load', initialize_notification);
+$(document).ready(initialize_calendar);
+$(document).ready(initialize_notification);

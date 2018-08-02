@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function () {
+$(document).ready(function () {
 
         // ANIMATEDLY DISPLAY THE NOTIFICATION COUNTER.
         $('#noti_Counter')
@@ -6,7 +6,7 @@ $(document).on('turbolinks:load', function () {
             .css({ top: '-10px' })
             .animate({ top: '-2px', opacity: 1 }, 500);
 
-        $('#noti_Button').on('click', function () {
+        $(document).on('click','#noti_Button', function () {
 
             // TOGGLE (SHOW OR HIDE) NOTIFICATION WINDOW.
             $('#notifications').fadeToggle('fast', 'linear', function () {
