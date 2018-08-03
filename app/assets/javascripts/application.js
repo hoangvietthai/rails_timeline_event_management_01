@@ -10,6 +10,7 @@
 //= require jquery.mCustomScrollbar.concat.min
 //= require jquery.scrollUp
 //= require jquery.selectBox
+//= require leaflet-providers
 //= require leaflet
 //= require leaflet.markercluster
 //= require particles.min
@@ -37,7 +38,7 @@
 //= require metisMenu.min
 //= require app
 //= require jquery.dataTables.min
+//= require morris-data
+//= require morris.min
 //= require dataTables.bootstrap.min
 //= require dataTables.responsive
-//=require jquery.turbolinks
-//=require turbolinks

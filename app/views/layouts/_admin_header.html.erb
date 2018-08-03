@@ -75,7 +75,9 @@
                     <%= link_to t(".management"), admin_root_path %>
                   <% end %>
                 </li>
-                <%= render "layouts/ring" %>
+                <li id="noti_Container" class="notiplus">
+                  <%= render "layouts/ring" %>
+                </li>
                 <% if logged_in? %>
                   <li class="dropdown appoinment-btn">
                     <%= link_to "#", class: "dropdown-toggle thm-btn pt-5 pb-5 btn-drop-down", data: {toggle: "dropdown"} do %>

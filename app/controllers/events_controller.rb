@@ -2,7 +2,7 @@ class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
 
   def index
-    @events = Event.select :id, :description, :time_from,
+    @events = current_user.events.select :id, :description, :time_from,
       :time_to, :importance, :place
   end
 
