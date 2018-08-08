@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 2018_07_23_070126) do
     t.datetime "time_from"
     t.datetime "time_to"
     t.boolean "remind"
-    t.boolean "visibility"
     t.string "importance"
     t.string "description"
     t.datetime "created_at", null: false

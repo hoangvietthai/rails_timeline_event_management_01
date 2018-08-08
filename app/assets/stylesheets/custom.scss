@@ -113,15 +113,6 @@ $btn_calendar_background: #346d21;
   }
 }
 
-.time-select-1 {
-  @extend .time-select;
-
-  select {
-    float: initial;
-    margin-left: 14%;
-  }
-}
-
 .time-select-3 {
   @extend .time-select;
 
