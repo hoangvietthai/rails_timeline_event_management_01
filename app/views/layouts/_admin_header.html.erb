@@ -71,14 +71,17 @@
                   <%= link_to t(".help"), help_path %>
                 </li>
                 <li>
+                  <%= link_to t(".group"), created_events_path %>
+                </li>
+                <li>
                   <% if current_user.admin? %>
-                    <%= link_to t(".management"), admin_root_path %>
+                    <%= link_to t(".users"), admin_root_path %>
                   <% end %>
                 </li>
                 <li id="noti_Container" class="notiplus">
                   <%= render "layouts/ring" %>
                 </li>
-                <% if logged_in? %>
+                <% if user_signed_in? %>
                   <li class="dropdown appoinment-btn">
                     <%= link_to "#", class: "dropdown-toggle thm-btn pt-5 pb-5 btn-drop-down", data: {toggle: "dropdown"} do %>
                       <%= first_part_of current_user.email %><b class="caret"></b>
@@ -91,7 +94,7 @@
                         <%= link_to t(".setting"), edit_user_path(current_user) %>
                       </li>
                       <li>
-                        <%= link_to t(".logout"), logout_path, method: :delete %>
+                        <%= link_to t(".logout"), destroy_user_session_path, method: :delete %>
                       </li>
                     </ul>
                   </li>

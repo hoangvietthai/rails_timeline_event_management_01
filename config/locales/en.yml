@@ -57,6 +57,7 @@ en:
       user: "User"
       account: "Account"
       users: "Users"
+      group: "Events"
       management: "Management"
     admin_header:
       hellow: "Hello, Welcome to Timeline Team, Inc."
@@ -64,6 +65,10 @@ en:
       nam2: "9am - 5pm"
       nam3: "framgia@gmail.com"
       nam4: "Find us on map"
+      group: "Events"
+    events_mana_header:
+      created: "Created events"
+      invited: "Invited events"
     ring:
       place: " at "
       message: "You have a "
@@ -137,6 +142,12 @@ en:
         sagittis non justo at ultri"
     home:
       home: "Home"
+  events_management:
+    created_events:
+      created: "Created"
+      dash: " - "
+    invited_events:
+      invited: "Invited"
   users:
     mailer:
       confirmation_instructions:

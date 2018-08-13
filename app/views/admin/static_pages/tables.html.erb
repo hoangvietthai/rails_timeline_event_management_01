@@ -10,8 +10,8 @@
         <h1 class="page-header user"><%= t "t.users" %></h1>
       </div>
     </div>
-
     <div>
+      <%= paginate @users %>
       <table class="table table-bordered table-hover table_fix">
         <thead>
           <tr >
@@ -41,6 +41,7 @@
           <% end %>
         <% end %>
       </table>
+      <%= paginate @users %>
     </div>
   </div>
 </div>

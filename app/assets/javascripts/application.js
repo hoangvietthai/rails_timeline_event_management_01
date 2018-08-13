@@ -10,7 +10,6 @@
 //= require jquery.mCustomScrollbar.concat.min
 //= require jquery.scrollUp
 //= require jquery.selectBox
-
 //= require leaflet
 //= require leaflet.markercluster
 //= require particles.min
