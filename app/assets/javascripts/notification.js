@@ -10,8 +10,6 @@ var initialize_notification = function () {
             $(".modal-body #eventStart").val(myEventStart);
             var myEventEnd = $(this).data('end');
             $(".modal-body #eventEnd").val(myEventEnd);
-            var myEventVisibility = $(this).data('visibility');
-            $(".modal-body #eventVisibility").val(myEventVisibility ? 'public' : 'private');
             var myEventImportance = $(this).data('importance');
             $(".modal-body #eventImportance").val(myEventImportance);
             var myEventRemind = $(this).data('remind');

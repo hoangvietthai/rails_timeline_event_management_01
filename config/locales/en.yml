@@ -33,13 +33,11 @@ en:
       nam: "2018 &copy; Timeline"
       info: "framgia@gmail.com"
     header:
-      place: "Place :"
       message: "Message :"
       from: "From :"
       to: "To :"
       event: "Event"
       place: "Place :"
-      visibility: "Visibility :"
       importance: "Importance :"
       remind: "Remind :"
       hellow: "Hello, Welcome to Timeline Team, Inc."
@@ -71,17 +69,6 @@ en:
       message: "You have a "
       from: " from "
       to: " to "
-  sessions:
-    create:
-      please_log: "Invalid email or password"
-      cannot: "Cannot activated"
-    new:
-      we: "We make it awesome"
-      remember: "Remember me"
-      login: "Log in"
-      dont: "Don't have an account?"
-      sign_up: "Sign up now!"
-      forgot_pass: "(forgot password)"
   static_pages:
     please_login: "Please login"
     about:
@@ -103,7 +90,6 @@ en:
        dignissim nibh. Suspendisse potenti. Vivamus dictum volutpat dapibus.
        Fusce sed varius massa. Fusce et purus sit amet erat fermentum rutrum. Pellentesque pellentesque auctor vehicula. Integer ut ligula blandit, pellentesque neque in, hendrerit magna."
       nulla: "Nulla venenatis auctor quam, ac porta lectus dictum in"
-      aliquam: "Aliquam sodales nisi sit amet lorem"
       suspendisse: "Suspendisse vulputate tellus in justo convallis imperdiet"
       Morbi: "Morbi id lorem consequat, sodales mi non"
       Cras: "Cras fringilla efficitur elementum"
@@ -152,19 +138,55 @@ en:
     home:
       home: "Home"
   users:
+    mailer:
+      confirmation_instructions:
+        activate: "Activate"
+        mail_message: "Welcome to the Sample App! Click on the link below to activate your account:"
+        hi: "Hi"
+      reset_password_instructions:
+        reset: "Password reset"
+        back: "Back"
+        click_pls: "To reset your password click the link below:"
+        reset_btn: "Reset password"
+        expire_msg: "This link will expire in two hours."
+        reset_noti: "If you did not request your password to be reset, please ignore this email and
+          your password will stay as it is."
+    passwords:
+      new:
+        we: "We make it awesome"
+        forgot_password: "Forgot password"
+        submit_btn: "Submit"
+      edit:
+        we: "We make it awesome"
+        reset_pass: "Reset password"
+        update_pass_btn: "Update password"
+        confirm: "Confirmation"
+    sessions:
+      create:
+        please_log: "Invalid email or password"
+        cannot: "Cannot activated"
+      new:
+        we: "We make it awesome"
+        remember: "Remember me"
+        login: "Log in"
+        dont: "Don't have an account?"
+        sign_up: "Sign up now!"
+        forgot_pass: "(forgot password)"
     log_false: "Log In false"
     please_check_email: "Please check email"
     updated: "Updated"
     please_log: "Please LogIn"
     user_not: "User not found"
-    new:
-      create: "Create your account"
-      already: "Already have an account?"
-      email: "Email"
-      password: "Password"
-      pass_con: "Password confirm"
-      sign_in : "Sign in"
-      title_signup: "Sign up"
+    registrations:
+      new:
+        create: "Create your account"
+        already: "Already have an account?"
+        password: "Password"
+        pass_con: "Password confirm"
+        sign_in : "Sign in"
+        title_signup: "Sign up"
+        email: "Email Address"
+        pass: "Password"
     index:
       users_all: "All users"
       delete: "Delete"
@@ -189,39 +211,17 @@ en:
       error_noti: "The form contains "
       error: "error"
   user_mailer:
-    account_activation:
-      activate: "Activate"
-      mail_message: "Welcome to the Sample App! Click on the link below to activate your account:"
-      hi: "Hi"
     post_notice:
       hello: "Hello "
       event_at: "Event at "
       is_only: " is only 2 hours is to come, you pay attention "
       notice_of_deadline: "Notice of Deadline "
       event: "Event "
-    password_reset:
-      reset: "Password reset"
-      back: "Back"
-      click_pls: "To reset your password click the link below:"
-      reset_btn: "Reset password"
-      expire_msg: "This link will expire in two hours."
-      reset_noti: "If you did not request your password to be reset, please ignore this email and
-        your password will stay as it is."
   activate_account: "Account activation"
   reset_pass: "Password reset"
   account_activations:
     active_success: "Account activated!"
     active_danger: "Invalid activation link"
-  password_resets:
-    new:
-      we: "We make it awesome"
-      forgot_password: "Forgot password"
-      submit_btn: "Submit"
-    edit:
-      we: "We make it awesome"
-      reset_pass: "Reset password"
-      update_pass_btn: "Update password"
-      confirm: "Confirmation"
     check_mail_pls: "Email sent with password reset instructions"
     mail_not_found: "Email address not found"
     pass_reseted: "Password has been reset."
