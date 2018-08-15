@@ -24,7 +24,7 @@ ActiveRecord::Schema.define(version: 2018_08_10_092222) do
   end
 
   create_table "notifications", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.datetime "notify_before"
+    t.integer "notify_before"
     t.bigint "event_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

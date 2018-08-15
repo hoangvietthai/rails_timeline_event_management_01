@@ -214,7 +214,7 @@ en:
     post_notice:
       hello: "Hello "
       event_at: "Event at "
-      is_only: " is only 2 hours is to come, you pay attention "
+      is_only: " is to come, you pay attention "
       notice_of_deadline: "Notice of Deadline "
       event: "Event "
   activate_account: "Account activation"

@@ -7,7 +7,7 @@ class Admin::StaticPagesController < AdminsController
   def tables; end
 
   def find_users
-    @users = User.where(activated: true).paginate page: params[:page],
+    @users = User.paginate page: params[:page],
       per_page: Settings.paginate.per_page
   end
 end

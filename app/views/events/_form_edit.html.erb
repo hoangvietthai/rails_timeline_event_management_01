@@ -27,6 +27,12 @@
       <%= f.label :remind %>
       <%= f.check_box :remind, {checked: true}, data: {toggle: "toggle"}, class: "checkbox-inline" %>
     </div>
+    <%= f.fields_for :notification do |noti| %>
+      <div class="form-group">
+        <%= noti.label :notify_before_hours %>
+        <%= noti.text_field :notify_before, class: "form-control" %>
+      </div>
+    <% end %>
     <div class="modal-footer">
       <% if @event.new_record? %>
         <%= f.submit t(".add_event_btn"), class: "btn btn-color btn-md btn-signup" %>
