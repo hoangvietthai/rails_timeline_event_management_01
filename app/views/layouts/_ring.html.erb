@@ -1,61 +1,58 @@
-
-  <div id="noti_Counter"><%= current_user.count_notification %></div>
-  <div id="noti_dont" data-noti="<%= current_user.get_notis %>"></div>
-  <i id="noti_Button" class="fa fa-bell" aria-hidden="true"></i>
-  <div id="notifications" class="list_fix stuck">
-    <h3 class="noti1"><%= t ".noti" %></h3>
-    <ul class="list-group">
-      <% current_user.event_dontdeadline.each do |notification| %>
-        <button id="<%= notification.id %>" class="btn-noti" type="button" data-toggle="modal" data-target="#myModal" class=""
-          data-description="<%= notification.description %>"
-          data-place="<%= notification.place %>"
-          data-start="<%= notification.time_from %>"
-          data-end="<%= notification.time_to %>"
-          data-visibility="<%= notification.visibility %>"
-          data-importance="<%= notification.importance %>"
-          data-remind="<%= notification.remind %>">
-          <li class="list-group-item row seen-background" id="notigroup">
-            <div class="noti col">
-                <h4 class="noti_form1">
-                  <%= t ".message" %><b><%= notification.description %></b>
-                  <%= t ".place" %><b><%= notification.place %></b></h4>
-                  <%= t ".from" %><b><%= notification.time_from.strftime("%d/%m/%y %H:%M") %></b>
-                  <%= t ".to" %><b><%= notification.time_to.strftime("%d/%m/%y %H:%M") %></b></h4>
-            </div>
-            <div class="col p-20">
-              <%= image_tag "details.svg", class: "details-icon row" %>
-              <%= image_tag "seen.svg", class: "seen-icon row" %>
-            </div>
-          </li>
-        </button>
-      <% end %>
-      <div id="notied" data-noti="<%= current_user.get_notied %>"></div>
-      <% current_user.event_deadline.each do |notification| %>
-        <button id="<%= notification.id %>" class="btn-noti" type="button" data-toggle="modal" data-target="#myModal"
-          data-description="<%= notification.description %>"
-          data-place="<%= notification.place %>"
-          data-start="<%= notification.time_from %>"
-          data-end="<%= notification.time_to %>"
-          data-visibility="<%= notification.visibility %>"
-          data-importance="<%= notification.importance %>"
-          data-remind="<%= notification.remind %>">
-          <li class="list-group-item row not-seen-bgr" id="notigroup">
-            <div class="noti-seen">
-              <h4 class="noti_form1">
-                <%= t ".message" %><b><%= notification.description %></b>
-                <%= t ".place" %><b><%= notification.place %></b></h4>
-                <%= t ".from" %><b><%= notification.time_from.strftime("%d/%m/%y %H:%M") %></b>
-                <%= t ".to" %><b><%= notification.time_to.strftime("%d/%m/%y %H:%M") %></b></h4>
-            </div>
-            <div class="col p-20">
-              <%= image_tag "details.svg", class: "details-icon row" %>
-              <%= image_tag "seen.svg", class: "seen-icon row" %>
-            </div>
-          </li>
-        </button>
-      <% end %>
-    </ul>
-  </div>
+<div id="noti_Counter"><%= current_user.count_notification %></div>
+<div id="noti_dont" data-noti="<%= current_user.get_notis %>"></div>
+<i id="noti_Button" class="fa fa-bell" aria-hidden="true"></i>
+<div id="notifications" class="list_fix stuck">
+  <h3 class="noti1"><%= t ".noti" %></h3>
+  <ul class="list-group">
+    <% current_user.event_dontdeadline.each do |notification| %>
+      <button id="<%= notification.id %>" class="btn-noti" type="button" data-toggle="modal" data-target="#myModal" class=""
+              data-description="<%= notification.description %>"
+              data-place="<%= notification.place %>"
+              data-start="<%= notification.time_from %>"
+              data-end="<%= notification.time_to %>"
+              data-importance="<%= notification.importance %>"
+              data-remind="<%= notification.remind %>">
+        <li class="list-group-item row seen-background" id="notigroup">
+          <div class="noti col">
+            <h4 class="noti_form1">
+              <%= t ".message" %><b><%= notification.description %></b>
+              <%= t ".place" %><b><%= notification.place %></b></h4>
+            <%= t ".from" %><b><%= notification.time_from.strftime("%d/%m/%y %H:%M") %></b>
+            <%= t ".to" %><b><%= notification.time_to.strftime("%d/%m/%y %H:%M") %></b></h4>
+          </div>
+          <div class="col p-20">
+            <%= image_tag "details.svg", class: "details-icon row" %>
+            <%= image_tag "seen.svg", class: "seen-icon row" %>
+          </div>
+        </li>
+      </button>
+    <% end %>
+    <div id="notied" data-noti="<%= current_user.get_notied %>"></div>
+    <% current_user.event_deadline.each do |notification| %>
+      <button id="<%= notification.id %>" class="btn-noti" type="button" data-toggle="modal" data-target="#myModal"
+              data-description="<%= notification.description %>"
+              data-place="<%= notification.place %>"
+              data-start="<%= notification.time_from %>"
+              data-end="<%= notification.time_to %>"
+              data-importance="<%= notification.importance %>"
+              data-remind="<%= notification.remind %>">
+        <li class="list-group-item row not-seen-bgr" id="notigroup">
+          <div class="noti-seen">
+            <h4 class="noti_form1">
+              <%= t ".message" %><b><%= notification.description %></b>
+              <%= t ".place" %><b><%= notification.place %></b></h4>
+            <%= t ".from" %><b><%= notification.time_from.strftime("%d/%m/%y %H:%M") %></b>
+            <%= t ".to" %><b><%= notification.time_to.strftime("%d/%m/%y %H:%M") %></b></h4>
+          </div>
+          <div class="col p-20">
+            <%= image_tag "details.svg", class: "details-icon row" %>
+            <%= image_tag "seen.svg", class: "seen-icon row" %>
+          </div>
+        </li>
+      </button>
+    <% end %>
+  </ul>
+</div>
 
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-dialog">
@@ -65,66 +62,57 @@
       </div>
       <div class="modal-body">
         <div class="row pl-50">
-        <div class="col-md-5">
-          <label for="eventDes" class="col-form-label"><%= t "layouts.header.message" %></label>
-        </div>
-        <div class="col-md-7">
-          <input type="text" name="eventDes" id="eventDes" value="" readonly/>
-        </div>
-        </div>
-        <hr>
-        <div class="row pl-50">
-        <div class="col-md-5">
-          <label for="eventPlace" class="col-form-label"><%= t "layouts.header.place" %></label>
-        </div>
-        <div class="col-md-7">
-          <input type="text" name="eventPlace" id="eventPlace" value="" readonly/>
-        </div>
-        </div>
-        <hr>
-         <div class="row pl-50">
-        <div class="col-md-5">
-          <label for="eventStart" class="col-form-label"><%= t "layouts.header.from" %></label>
-        </div>
-        <div class="col-md-7">
-          <input type="text" name="eventStart" id="eventStart" value="" readonly/>
-        </div>
+          <div class="col-md-5">
+            <label for="eventDes" class="col-form-label"><%= t "layouts.header.message" %></label>
+          </div>
+          <div class="col-md-7">
+            <input type="text" name="eventDes" id="eventDes" value="" readonly/>
+          </div>
         </div>
         <hr>
         <div class="row pl-50">
-        <div class="col-md-5">
-          <label for="eventEnd" class="col-form-label"><%= t "layouts.header.to" %></label>
-        </div>
-        <div class="col-md-7">
-          <input type="text" name="eventEnd" id="eventEnd" value="" readonly/>
-        </div>
-        </div>
-        <hr>
-        <div class="row pl-50">
-        <div class="col-md-5">
-          <label for="eventVisibility" class="col-form-label"><%= t "layouts.header.visibility" %></label>
-        </div>
-        <div class="col-md-7">
-          <input type="text" name="eventVisibility" id="eventVisibility" value="" readonly/>
-        </div>
+          <div class="col-md-5">
+            <label for="eventPlace" class="col-form-label"><%= t "layouts.header.place" %></label>
+          </div>
+          <div class="col-md-7">
+            <input type="text" name="eventPlace" id="eventPlace" value="" readonly/>
+          </div>
         </div>
         <hr>
         <div class="row pl-50">
-        <div class="col-md-5">
-          <label for="eventImportance" class="col-form-label"><%= t "layouts.header.importance" %></label>
-        </div>
-        <div class="col-md-7">
-          <input type="text" name="eventImportance" id="eventImportance" value="" readonly/>
-        </div>
+          <div class="col-md-5">
+            <label for="eventStart" class="col-form-label"><%= t "layouts.header.from" %></label>
+          </div>
+          <div class="col-md-7">
+            <input type="text" name="eventStart" id="eventStart" value="" readonly/>
+          </div>
         </div>
         <hr>
         <div class="row pl-50">
-        <div class="col-md-5">
-          <label for="eventRemind" class="col-form-label"><%= t "layouts.header.remind" %></label>
+          <div class="col-md-5">
+            <label for="eventEnd" class="col-form-label"><%= t "layouts.header.to" %></label>
+          </div>
+          <div class="col-md-7">
+            <input type="text" name="eventEnd" id="eventEnd" value="" readonly/>
+          </div>
         </div>
-        <div class="col-md-7">
-          <input type="text" name="eventRemind" id="eventRemind" value="" readonly/>
+        <hr>
+        <div class="row pl-50">
+          <div class="col-md-5">
+            <label for="eventImportance" class="col-form-label"><%= t "layouts.header.importance" %></label>
+          </div>
+          <div class="col-md-7">
+            <input type="text" name="eventImportance" id="eventImportance" value="" readonly/>
+          </div>
         </div>
+        <hr>
+        <div class="row pl-50">
+          <div class="col-md-5">
+            <label for="eventRemind" class="col-form-label"><%= t "layouts.header.remind" %></label>
+          </div>
+          <div class="col-md-7">
+            <input type="text" name="eventRemind" id="eventRemind" value="" readonly/>
+          </div>
         </div>
       </div>
       <div class="modal-footer">

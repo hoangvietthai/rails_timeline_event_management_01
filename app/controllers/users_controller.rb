@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
-  layout "layoutlog", only: [:new, :create, :edit, :update]
-  before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
-  before_action :find_by, only: [:show, :edit, :update, :correct_user,
+  layout "layoutlog", only: [:edit, :update]
+  before_action :authenticate_user!, only: [:index, :edit, :update, :destroy]
+  before_action :find_by, only: [:show, :edit, :update,
     :destroy]
   before_action :correct_user, only: [:edit, :update]
   before_action :admin_user, only: :destroy
@@ -9,21 +9,6 @@ class UsersController < ApplicationController
   def index
     @users = User.where(activated: true).paginate page: params[:page],
       per_page: Settings.paginate.per_page
-  end
-
-  def new
-    @user = User.new
-  end
-
-  def create
-    @user = User.new user_params
-    if @user.save
-      @user.send_activation_email
-      flash[:info] = t ".please_check_email"
-      redirect_to login_path
-    else
-      render :new
-    end
   end
 
   def show; end

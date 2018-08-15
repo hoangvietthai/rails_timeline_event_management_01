@@ -42,5 +42,6 @@ group :production do
 end
 
 gem "config"
+gem "devise"
 gem "rubocop", "~> 0.54.0", require: false
 gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw, :jruby]
