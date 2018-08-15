@@ -12,7 +12,7 @@
           <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
         <% end %>
         <h1 class="login-header"><%= t ".login" %></h1>
-        <%= form_for :session, url: login_path do |f| %>
+        <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>
           <div class="form-group">
             <%= f.label :email %>
             <%= f.email_field :email, class: "form-control" %>
@@ -24,14 +24,14 @@
           <%= f.label :remember_me, class: "checkbox inline" do %>
             <%= f.check_box :remember_me %>
             <span><%= t ".remember" %></span>
-            <%= link_to t(".forgot_pass"), new_password_reset_path %>
+            <%= link_to t(".forgot_pass"), new_user_password_path %>
           <% end %>
           <%= f.submit t(".login"), class: "btn btn-color btn-md btn-block btn-signup" %>
         <% end %>
         <div class="login-footer">
           <div class="text-center">
             <p><%= t ".dont" %>
-              <%= link_to t(".sign_up"), signup_path %>
+              <%= link_to t(".sign_up"), new_user_registration_path %>
           </div>
         </div>
       </div>

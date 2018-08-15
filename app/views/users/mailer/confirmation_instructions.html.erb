@@ -1,0 +1,4 @@
+<h1><%= t "layouts.header.app_name" %></h1>
+<p><%= t ".hi" %><%= @user.email %>,</p>
+<p><%= t ".mail_message" %></p>
+<%= link_to t(".activate"), confirmation_url(@resource, confirmation_token: @token) %>

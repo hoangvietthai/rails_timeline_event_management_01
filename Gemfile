@@ -8,6 +8,7 @@ gem "bootsnap", ">= 1.1.0", require: false
 gem "bootstrap-sass", "3.3.7"
 gem "bootstrap-will_paginate", "1.0.0"
 gem "coffee-rails", "~> 4.2"
+gem "devise"
 gem "figaro"
 gem "font-awesome-rails"
 gem "fullcalendar-rails"
