@@ -1,0 +1,47 @@
+<div class="col-md-7">
+  <div class="p-30">
+    <%= form_for @event, remote: true do |f| %>
+      <%= render "shared/error_messages", object: f.object %>
+      <div class="form-group modalbox">
+        <%= f.label :description %>
+        <%= f.text_area :description, class: "form-control" %>
+      </div>
+      <div class="form-group modalbox">
+        <%= f.label :place %>
+        <%= f.text_field :place, class: "form-control" %>
+      </div>
+      <%= f.fields_for :notification do |noti| %>
+        <div class="form-group">
+          <%= noti.label :notify_before_hours %>
+          <%= noti.text_field :notify_before, class: "form-control", placeholder: "Enter the number of hours you want to notice the start time " %>
+        </div>
+      <% end %>
+      <div class="form-group mt-30 time-select-2">
+        <%= f.label :time_from %>
+        <%= f.text_field :time_from, class: "form-control start_hidden date-range-picker" %>
+      </div>
+      <div class="form-group mt-30 time-select-2">
+        <%= f.label :time_to %>
+        <%= f.text_field :time_to, class: "form-control end_hidden date-range-picker" %>
+      </div>
+      <div class="form-group mt-30 time-select-3">
+        <%= f.label :importance %>
+        <%= f.select :importance, [[t(".normal"), t(".normal_color")], [t(".v_gravity"), t(".v_gravity_color")], [t(".gravity"), t(".gravity_color")], [t(".v_normal"), t(".v_normal_color")]], class: "form-control" %>
+      </div>
+      <div class="form-group mt-30 modalbox-1">
+        <%= f.label :remind %>
+        <%= f.check_box :remind, {checked: true}, data: {toggle: "toggle"}, class: "checkbox-inline" %>
+      </div>
+      <div class="modal-footer">
+        <% if @event.new_record? %>
+          <%= f.submit t(".add_event_btn"), class: "btn btn-color btn-md btn-signup" %>
+        <% else %>
+          <%= f.submit t(".update_btn"), class: "btn btn-color btn-md btn-signup" %>
+          <%= link_to t(".delete"), event, method: :delete, class: "btn btn-danger",
+                      data: {confirm: t(".confirm")}, remote: true %>
+        <% end %>
+    <% end %>
+    <button type="button" class="btn btn-close" data-dismiss="modal"><%= t ".close" %></button>
+    </div>
+  </div>
+</div>

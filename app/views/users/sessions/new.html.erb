@@ -9,7 +9,7 @@
     <div class="col-md-4 ">
       <div class="content-form-box">
         <% flash.each do |message_type, message| %>
-          <%= content_tag(:div, message, class: "alert alert-#{message_type}") %>
+          <%= content_tag :div, message, class: "alert alert-#{change_type message_type}" %>
         <% end %>
         <h1 class="login-header"><%= t ".login" %></h1>
         <%= form_for resource, as: resource_name, url: session_path(resource_name) do |f| %>

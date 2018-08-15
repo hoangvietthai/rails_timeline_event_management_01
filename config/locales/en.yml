@@ -252,23 +252,6 @@ en:
       edit_event: "Edit Event"
     new:
       create_new_event: "New Event"
-    form_edit:
-      comment: "Comment"
-      mind: "What is on your mind?"
-      add: "Add Comment"
-      close: "Close"
-      v_gravity: "very gravity"
-      normal: "normal"
-      v_normal: "very normal"
-      gravity: "gravity"
-      v_gravity_color: "Red"
-      normal_color: "Green"
-      v_normal_color: "Blue"
-      gravity_color: "Orange"
-      add_event_btn: "Add Event"
-      update_btn: "Update"
-      delete: "Delete"
-      confirm: "Are you sure?"
     form:
       close: "Close"
       v_gravity: "very gravity"
@@ -312,3 +295,30 @@ en:
       deleted: "Deleted"
       delete_fail: "Delete fail"
   time_validate: "is cannot bigger than time_to"
+  invites:
+    form:
+      invite: "Invite"
+      mind: "Share to your friends..."
+      add: "Invite"
+      email: "example@gmail.com"
+  calendar:
+    form:
+      add_event_btn: "Add Event"
+      update_btn: "Update"
+      delete: "Delete"
+      confirm: "Are you sure?"
+      close: "Close"
+      v_gravity: "very gravity"
+      normal: "normal"
+      v_normal: "very normal"
+      gravity: "gravity"
+      v_gravity_color: "Red"
+      normal_color: "Green"
+      v_normal_color: "Blue"
+      gravity_color: "Orange"
+  comments:
+    form:
+      input_message: "Write your message"
+      comment: "Comment"
+      mind: "What is on your mind?"
+      add: "Add Comment"

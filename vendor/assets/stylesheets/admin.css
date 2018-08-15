@@ -78,8 +78,8 @@ button {
  outline: 0;
 }
 
-.span{
- color:#666666;
+.btn span{
+ color: #ffffff;
 }
 
 .list-group-item:first-child,.list-group-item:last-child {

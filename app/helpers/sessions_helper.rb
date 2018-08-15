@@ -6,4 +6,12 @@ module SessionsHelper
   def current_ # {mapping}
     @current_ # {mapping} ||= warden.authenticate(scope: :#{mapping})
   end
+
+  def change_type message_type
+    if message_type == "notice"
+      return "success"
+    elsif message_type == "alert"
+      return "danger"
+    end
+  end
 end

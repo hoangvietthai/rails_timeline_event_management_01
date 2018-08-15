@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   resources :users
   resources :events
   resources :notifications, only: :show
+  resources :invites, only: [:new, :create]
 
   namespace :admin do
     root to: "static_pages#tables"

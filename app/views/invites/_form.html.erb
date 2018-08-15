@@ -1,0 +1,30 @@
+<div class="col-md-5">
+  <h5 class="pt-50 comment"><%= t ".invite" %></h5>
+  <div class="well">
+    <h5 class="comment"><%= t ".mind" %></h5>
+    <div>
+      <%= form_for :invite, url: invites_path, method: :post, remote: true do |f| %>
+        <div class="add-mail-box">
+          <table>
+            <tbody>
+            <tr>
+              <%= f.hidden_field :event_id, value: @event.id %>
+              <td id="list-items">
+              </td>
+              <%= f.text_field :to, autofocus: true, autocomplete: "email", class: "email-input-box" %>
+            </tr>
+            </tbody>
+          </table>
+          </br>
+          </br>
+          <div class="form-group">
+            <%= f.submit t(".add"), class: "btn btn-primary btn-sm" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <hr data-brackets-id="12673">
+    <ul data-brackets-id="12674" id="sortable" class="list-unstyled ui-sortable">
+    </ul>
+  </div>
+</div>
