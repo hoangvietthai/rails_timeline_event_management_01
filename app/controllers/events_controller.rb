@@ -10,6 +10,7 @@ class EventsController < ApplicationController
 
   def new
     @event = Event.new
+    @event.build_notification
   end
 
   def edit; end
@@ -18,7 +19,6 @@ class EventsController < ApplicationController
     @event = current_user.events.build event_params
     if @event.save
       UserEvent.create event: @event, user: current_user
-      @event.create_notification notify_before: @event.get_notify_before
       current_user.send_mail_notification @event
     else
       render :new
@@ -49,6 +49,6 @@ class EventsController < ApplicationController
 
   def event_params
     params.require(:event).permit :description, :place, :time_from,
-      :time_to, :importance, :remind
+      :time_to, :importance, :remind, notification_attributes: [:notify_before]
   end
 end

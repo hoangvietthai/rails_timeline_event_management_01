@@ -21,6 +21,12 @@
       <%= f.label :importance %>
       <%= f.select :importance, [[t(".normal"), t(".normal_color")], [t(".v_gravity"), t(".v_gravity_color")], [t(".gravity"), t(".gravity_color")], [t(".v_normal"), t(".v_normal_color")]], class: "form-control" %>
     </div>
+    <%= f.fields_for :notification do |noti| %>
+      <div class="form-group">
+        <%= noti.label :notify_before_hours %>
+        <%= noti.text_field :notify_before, class: "form-control", placeholder: "Enter the number of hours you want to notice the start time " %>
+      </div>
+    <% end %>
     <div class="form-group mt-30 modalbox-1">
       <%= f.label :remind %>
       <%= f.check_box :remind, {checked: true}, data: {toggle: "toggle"}, class: "checkbox-inline" %>
