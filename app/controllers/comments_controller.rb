@@ -6,6 +6,13 @@ class CommentsController < ApplicationController
     redirect_to home_path
   end
 
+  def destroy
+    @comment = Comment.find params[:id]
+    return if @comment.destroy
+    flash[:danger] = t ".not_cmt"
+    redirect_to home_path
+  end
+
   private
   def comment_params
     params.require(:comment).permit :content, :event_id

@@ -15,6 +15,13 @@
   border-radius: 20px !important;
 }
 
+
+.icon_comment {
+ float: right;
+ padding-right: 15px;
+ color: red
+}
+
 .fix_images {
   width: 14px;
   height: 14px;

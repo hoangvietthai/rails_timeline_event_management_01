@@ -1,8 +1,9 @@
-<div class="comment">
+<div class="comment" cmt_id="<%= @comment.id %>">
 <%= image_tag "avatar.jpg", :size => "40x30" %>
 <strong class="primary-font"><%= current_user.email %></strong>
 <small class="pull-right text-muted">
 <span class="glyphicon glyphicon-time"></span><%=Time.now.to_i - @comment.created_at.to_i %>ms</small>
 <li class="font_comment"> <%= @comment.content %> </li>
+<%= link_to "", comment_path(@comment), method: :delete, class: "fa fa-window-close icon_comment",data: {confirm: t(".confirm")}, remote: true %>
 <hr data-brackets-id="12673">
 </div>
