@@ -10,9 +10,29 @@
   background-color: #e2f1f8;
 }
 
+.box_comment {
+  width: 100% !important;
+  border-radius: 20px !important;
+}
+
 .fix_images {
   width: 14px;
   height: 14px;
+}
+
+.font_comment {
+ color: black;
+ font-weight: normal;
+}
+
+.comment {
+  font-size: 12px;
+}
+
+.comment_height {
+  font-size: 12px;
+  height: 350px;
+  overflow-x: hidden;
 }
 
 li.ui-state-default{
