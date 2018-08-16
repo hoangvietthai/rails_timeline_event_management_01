@@ -146,8 +146,17 @@ en:
     created_events:
       created: "Created"
       dash: " - "
+      invite_remove: "Invite/Remove"
+      close: "Close"
+      remove: "Remove"
+      from_to: "From - To"
     invited_events:
       invited: "Invited"
+      invite_move: "Invite/Move"
+      close: "Close"
+      move: "Move"
+      dash: " - "
+      from_to: "From - To"
   users:
     mailer:
       confirmation_instructions:

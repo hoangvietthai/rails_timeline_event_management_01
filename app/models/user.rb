@@ -35,18 +35,6 @@ class User < ApplicationRecord
     event_deadline.map{|ev| ev.notification.id}
   end
 
-  def get_invited_events
-    @invited_events = user_events.select{|e| e.permission.zero?}.map do |ev|
-      events.find_by(id: ev.event_id)
-    end
-  end
-
-  def get_created_events
-    @created_events = user_events.select{|e| e.permission == 1}.map do |ev|
-      events.find_by(id: ev.event_id)
-    end
-  end
-
   def get_members_from_event event_id
     events.find_by(id: event_id).get_members
   end
