@@ -5,6 +5,18 @@
         <h1 class="page-header user"><%= t ".search" %></h1>
       </div>
     </div>
+    <%= search_form_for @q ,:url => url_for(:controller => "events_managements", :action => "search_events"), remote: true do |f| %>
+      <div class="form-group modalbox search_form">
+      <%= f.label :description_cont %>
+      <%= f.search_field :description_cont %>
+      <%= f.label :place_cont %>
+      <%= f.search_field :place_cont %>
+      <%= f.submit t(".search"), class: "btn btn-primary btn-sm" %>
+        </div>
+    <% end %>
+    </br>
+    <div id="result">
+    </div>
   </div>
 </div>
 

@@ -1,4 +1,5 @@
 class CommentsController < ApplicationController
+
   def create
     @comment = current_user.comments.new comment_params
     if @comment.save
@@ -12,6 +13,14 @@ class CommentsController < ApplicationController
       flash[:danger] = t ".not_cmt"
       redirect_to home_path
     end
+  end
+
+  def destroy
+    @comment = Comment.find params[:id]
+
+    return if @comment.destroy
+    flash[:danger] = t ".not_cmt"
+    redirect_to home_path
   end
 
   def destroy

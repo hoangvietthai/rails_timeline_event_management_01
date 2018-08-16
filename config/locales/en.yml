@@ -162,6 +162,8 @@ en:
       from_to: "From - To"
     search_events:
       search: "Search"
+    result:
+      no_info: "No Imformation"
   controller:
     not_cmt: "Not comment"
   users:

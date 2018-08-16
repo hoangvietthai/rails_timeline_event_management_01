@@ -1,0 +1,30 @@
+<% if !@result.empty? %>
+  <%= paginate @result %>
+  <table class="table table-bordered table-hover table_fix">
+    <thead>
+      <tr>
+        <th class="fix"><%= t ".description" %></th>
+        <th class="fix"><%= t ".place" %></th>
+        <th class="fix"><%= t ".from_to" %></th>
+      </tr>
+    </thead>
+    <% @result.each do |event| %>
+      <tbody>
+        <tr>
+          <td><p class="title"><%= event.description %></p></td>
+          <td><%= event.place %></td>
+          <td>
+            <%= event.time_from.strftime("%d/%m/%y %H:%M") %>
+            <%= t ".dash" %>
+            <%= event.time_to.strftime("%d/%m/%y %H:%M") %>
+          </td>
+        </tr>
+      </tbody>
+    <% end %>
+  </table>
+  <%= paginate @result %>
+<% else %>
+  <div class="alert display: inline-block">
+    <i class="fa fa-hand-o-right" aria-hidden="true"></i> <%= t ".no_info" %>
+  </div>
+<% end %>

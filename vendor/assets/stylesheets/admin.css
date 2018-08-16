@@ -10,9 +10,17 @@
   background-color: #e2f1f8;
 }
 
+.alert {
+  color: red;
+}
+
 .box_comment {
   width: 100% !important;
   border-radius: 20px !important;
+}
+
+.search_form {
+  color: black;
 }
 
 
