@@ -1,0 +1,78 @@
+<div id="wrapper">
+  <div class="container pt-70 pb-70">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header user"><%= t ".invited" %></h1>
+      </div>
+    </div>
+    <div>
+      <table class="table table-bordered table-hover table_fix">
+        <thead>
+          <tr >
+            <th class="fix"><%=  t ".description" %></th>
+            <th class="fix"><%=  t ".place" %></th>
+            <th class="fix"><%=  t ".time_from" %></th>
+            <th class="fix"><%=  t ".time_to" %></th>
+            <th class="fix"><%=  t ".members" %></th>
+          </tr>
+        </thead>
+        <% current_user.get_created_events.each do |event| %>
+          <tbody>
+            <tr>
+              <td><p class="title"><%= event.description %></p></td>
+              <td><%= event.place %></td>
+              <td> <%= event.time_from.strftime("%d/%m/%y %H:%M") %></td>
+              <td><%= event.time_to.strftime("%d/%m/%y %H:%M") %></td>
+              <td>
+                <button data-event-id="<%= event.id %>" type="button"
+                  class="btn btn-success dcmbt" data-toggle="modal"
+                  data-target="#memberModal" ><%= t ".invite_move" %></button>
+              </td>
+            </tr>
+          </tbody>
+          <div style="display:none;" id="event-<%= event.id %>">
+            <% current_user.get_members_from_event(event.id).each do |mem| %>
+              <div class="email-item">
+                <span>
+                  <div class="email-name">
+                    <%= first_part_of mem.email %>
+                  </div>
+                  <div class="email-close"></div>
+                </span>
+              </div>
+            <% end %>
+          <div class="add_mem_in"></div>
+        <% end %>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="memberModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;</button>
+        <h4 class="modal-title"><%= t ".members" %></h4>
+      </div>
+      <div class="modal-body members">
+        
+      </div>
+      <div class="modal-footer">
+        <div class="col-xs-6">
+          <textarea id="dcmfg" rows="1" cols="35" value=""
+            class="email-input-box"></textarea>
+        </div>
+        <div class="col-xs-1">
+          <button id="add_btn" type="button" class="btn btn-success">
+            <%= t ".invite" %></button>
+        </div>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">
+          <%= t ".move" %></button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          <%= t ".close" %></button>
+      </div>
+    </div>
+  </div>
+</div>

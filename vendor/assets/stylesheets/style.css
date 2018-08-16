@@ -127,6 +127,11 @@ input,button,select,textarea{
 	font-family: 'PT Sans', sans-serif;
 }
 
+textarea {
+	border-style: groove;
+	border-width: 1px;
+}
+
 p{
 	position:relative;
 	line-height:1.9em;
@@ -572,7 +577,7 @@ ul,li{
 }
 .main-header .header-lower .outer-box{
 	position:relative;
-	padding:0px 150px 0px 0px;
+	padding:0px 50px 0px 0px;
 }
 .main-header .header-lower .search-box-btn{
 	position:absolute;

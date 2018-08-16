@@ -69,10 +69,13 @@
                 <li>
                   <%= link_to t(".help"), help_path %>
                 </li>
+                <li>
+                  <%= link_to t(".group"), created_events_path %>
+                </li>
                 <% if user_signed_in? %>
                   <li>
                     <% if current_user.admin? %>
-                      <%= link_to t(".management"), admin_root_path %>
+                      <%= link_to t(".users"), admin_root_path %>
                     <% end %>
                   </li>
                   <li id="noti_Container" class="notiplus">

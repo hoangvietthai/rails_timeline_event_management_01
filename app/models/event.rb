@@ -17,4 +17,14 @@ class Event < ApplicationRecord
   def all_day_event?
     time_from == time_from.midnight && time_to == time_to.midnight
   end
+
+  def get_notify_before
+    time_from - Settings.later.hours
+  end
+
+  def get_members
+    user_events.select{|e| e.event_id == id}.map do |mem|
+      users.find_by(id: mem.user_id)
+    end
+  end
 end
