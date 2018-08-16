@@ -6,23 +6,26 @@
       </div>
     </div>
     <div>
+      <%= paginate @invited_events %>
       <table class="table table-bordered table-hover table_fix">
         <thead>
           <tr >
-            <th class="fix"><%=  t ".description" %></th>
-            <th class="fix"><%=  t ".place" %></th>
-            <th class="fix"><%=  t ".time_from" %></th>
-            <th class="fix"><%=  t ".time_to" %></th>
-            <th class="fix"><%=  t ".members" %></th>
+            <th class="fix"><%= t ".description" %></th>
+            <th class="fix"><%= t ".place" %></th>
+            <th class="fix"><%= t ".from_to" %></th>
+            <th class="fix"><%= t ".members" %></th>
           </tr>
         </thead>
-        <% current_user.get_invited_events.each do |event| %>
+        <% @invited_events.each do |event| %>
           <tbody>
             <tr>
               <td><p class="title"><%= event.description %></p></td>
               <td><%= event.place %></td>
-              <td> <%= event.time_from.strftime("%d/%m/%y %H:%M") %></td>
-              <td><%= event.time_to.strftime("%d/%m/%y %H:%M") %></td>
+              <td>
+                <%= event.time_from.strftime("%d/%m/%y %H:%M") %>
+                <%= t ".dash" %>
+                <%= event.time_to.strftime("%d/%m/%y %H:%M") %>
+              </td>
               <td>
                 <button data-event-id="<%= event.id %>" type="button"
                   class="btn btn-success dcmbt" data-toggle="modal"
@@ -44,6 +47,7 @@
           <div class="add_mem_in"></div>
         <% end %>
       </table>
+      <%= paginate @invited_events %>
     </div>
   </div>
 </div>

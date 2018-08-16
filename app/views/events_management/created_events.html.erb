@@ -2,31 +2,34 @@
   <div class="container pt-70 pb-70">
     <div class="row">
       <div class="col-lg-12">
-        <h1 class="page-header user"><%= t ".invited" %></h1>
+        <h1 class="page-header user"><%= t ".created" %></h1>
       </div>
     </div>
     <div>
+      <%= paginate @created_events %>
       <table class="table table-bordered table-hover table_fix">
         <thead>
           <tr >
-            <th class="fix"><%=  t ".description" %></th>
-            <th class="fix"><%=  t ".place" %></th>
-            <th class="fix"><%=  t ".time_from" %></th>
-            <th class="fix"><%=  t ".time_to" %></th>
-            <th class="fix"><%=  t ".members" %></th>
+            <th class="fix"><%= t ".description" %></th>
+            <th class="fix"><%= t ".place" %></th>
+            <th class="fix"><%= t ".from_to" %></th>
+            <th class="fix"><%= t ".members" %></th>
           </tr>
         </thead>
-        <% current_user.get_created_events.each do |event| %>
+        <% @created_events.each do |event| %>
           <tbody>
             <tr>
               <td><p class="title"><%= event.description %></p></td>
               <td><%= event.place %></td>
-              <td> <%= event.time_from.strftime("%d/%m/%y %H:%M") %></td>
-              <td><%= event.time_to.strftime("%d/%m/%y %H:%M") %></td>
+              <td>
+                <%= event.time_from.strftime("%d/%m/%y %H:%M") %>
+                <%= t ".dash" %>
+                <%= event.time_to.strftime("%d/%m/%y %H:%M") %>
+              </td>
               <td>
                 <button data-event-id="<%= event.id %>" type="button"
                   class="btn btn-success dcmbt" data-toggle="modal"
-                  data-target="#memberModal" ><%= t ".invite_move" %></button>
+                  data-target="#memberModal" ><%= t ".invite_remove" %></button>
               </td>
             </tr>
           </tbody>
@@ -44,6 +47,7 @@
           <div class="add_mem_in"></div>
         <% end %>
       </table>
+      <%= paginate @created_events %>
     </div>
   </div>
 </div>
@@ -69,7 +73,7 @@
             <%= t ".invite" %></button>
         </div>
         <button type="button" class="btn btn-danger" data-dismiss="modal">
-          <%= t ".move" %></button>
+          <%= t ".remove" %></button>
         <button type="button" class="btn btn-default" data-dismiss="modal">
           <%= t ".close" %></button>
       </div>
