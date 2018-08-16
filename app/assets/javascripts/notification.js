@@ -19,14 +19,12 @@ var initialize_notification = function () {
 
     var noti_dont = $('#noti_dont').data('noti');
     $.each(noti_dont, function (i, id) {
-        var s = '#' + id;
-        setValueNoti(s)
+        setValueNoti('#noti_event-' + id)
     });
 
     var notied = $('#notied').data('noti');
     $.each(notied, function (i, id) {
-        var s = '#' + id;
-        setValueNoti(s)
+        setValueNoti('#noti_event-' + id)
     });
 };
 $(document).ready(initialize_notification);

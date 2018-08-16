@@ -35,31 +35,31 @@
 		});
 	}	
 	
-	// twitter feed widget 
-	function twitterFeedWidget() {
-	  if ($('.twitter').length) {	  	
-	  	var twitterWrapper = $('.twitter');	  		
-	  	var twitterCount = twitterWrapper.data('twitter-query-count');
-	  	var twitterName = twitterWrapper.data('twitter-name');
-	  	var slideCondition = twitterWrapper.data('enable-slide');
-	  	var slideCount = twitterWrapper.data('slide-count');
-	    $.ajax({
-			method: "POST",
-			url: "inc/twitter/tweet-api.php",
-			data: {
-				count: twitterCount,
-				name: twitterName,
-				slide_condition: slideCondition,
-				slide_count: slideCount
-			}
-		})
-		.done(function(msg) {
-			twitterWrapper.append(function () {
-				return msg;
-			});
-		});
-	  };
-	}
+	// // twitter feed widget 
+	// function twitterFeedWidget() {
+	//   if ($('.twitter').length) {	  	
+	//   	var twitterWrapper = $('.twitter');	  		
+	//   	var twitterCount = twitterWrapper.data('twitter-query-count');
+	//   	var twitterName = twitterWrapper.data('twitter-name');
+	//   	var slideCondition = twitterWrapper.data('enable-slide');
+	//   	var slideCount = twitterWrapper.data('slide-count');
+	//     $.ajax({
+	// 		method: "POST",
+	// 		url: "inc/twitter/tweet-api.php",
+	// 		data: {
+	// 			count: twitterCount,
+	// 			name: twitterName,
+	// 			slide_condition: slideCondition,
+	// 			slide_count: slideCount
+	// 		}
+	// 	})
+	// 	.done(function(msg) {
+	// 		twitterWrapper.append(function () {
+	// 			return msg;
+	// 		});
+	// 	});
+	//   };
+	// }
 	//Main Slider
 	if($('.main-slider .tp-banner').length){
 		jQuery('.main-slider .tp-banner').show().revolution({
@@ -721,7 +721,7 @@
 	$(window).on('load', function() {
 		handlePreloader();
 		fullScreenBanner();
-		twitterFeedWidget()
+		// twitterFeedWidget()
 	});	
 
 /* ==========================================================================

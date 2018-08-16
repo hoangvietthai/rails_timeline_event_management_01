@@ -1,0 +1,27 @@
+<div class="modal fade" id="memberModal" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">
+          &times;</button>
+        <h4 class="modal-title"><%= t ".members" %></h4>
+      </div>
+      <div class="modal-body members">
+        
+      </div>
+      <div class="modal-footer">
+        <div class="col-xs-6">
+          <textarea id="dcmfg" rows="1" cols="35" value=""
+            class="email-input-box"></textarea>
+        </div>
+        <div class="col-xs-1">
+          <button id="add_btn" type="button" class="btn btn-success">
+            <%= t ".invite" %></button>
+        </div>
+        <%= link_to t(".out"), "#", class: "btn btn-danger", data: {dismiss: "modal"} %>  
+        <button type="button" class="btn btn-default" data-dismiss="modal">
+          <%= t ".close" %></button>
+      </div>
+    </div>
+  </div>
+</div>

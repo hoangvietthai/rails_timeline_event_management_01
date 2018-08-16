@@ -45,9 +45,9 @@
 @import "hover.css";
 @import "jquery.mCustomScrollbar.min.css";
 /*----jquery ui css-------*/
-@import "../vendor/jquery-ui/jquery-ui.css";
+/* @import "../vendor/jquery-ui/jquery-ui.css"; */
 /*----date-picker---------*/
-@import "../vendor/time-picker/jquery.timepicker.css";
+/* @import "../vendor/time-picker/jquery.timepicker.css"; */
 /***
 
 ====================================================================
@@ -74,7 +74,7 @@ body {
 	font-family: 'PT Sans', sans-serif;
 	font-size:14px;
 	color:#888888;
-	line-height:1.8em;
+	line-height:1.3em;
 	font-weight:400;
 	background:#ffffff;
 	background-size:cover;

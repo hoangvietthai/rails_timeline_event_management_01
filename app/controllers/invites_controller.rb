@@ -15,6 +15,10 @@ class InvitesController < ApplicationController
     end
   end
 
+  def edit
+    @invite_events = UserEvent.where event_id: params[:id]
+  end
+
   private
 
   def invite_params

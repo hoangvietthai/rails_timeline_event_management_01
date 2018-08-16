@@ -29,11 +29,11 @@ class User < ApplicationRecord
   end
 
   def get_notis
-    event_dontdeadline.map{|ev| ev.notification.id}
+    event_dontdeadline.map{|ev| ev.notification.event_id}
   end
 
   def get_notied
-    event_deadline.map{|ev| ev.notification.id}
+    event_deadline.map{|ev| ev.notification.event_id}
   end
 
   def get_members_from_event event_id

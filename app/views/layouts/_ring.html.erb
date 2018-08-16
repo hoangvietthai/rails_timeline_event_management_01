@@ -1,11 +1,11 @@
 <div id="noti_Counter"><%= current_user.count_notification %></div>
-<div id="noti_dont" data-noti="<%= current_user.get_notis %>"></div>
 <i id="noti_Button" class="fa fa-bell" aria-hidden="true"></i>
 <div id="notifications" class="list_fix stuck">
   <h3 class="noti1"><%= t ".noti" %></h3>
   <ul class="list-group">
+    <div id="noti_dont" data-noti="<%= current_user.get_notis %>"></div>
     <% current_user.event_dontdeadline.each do |notification| %>
-      <button id="<%= notification.id %>" class="btn-noti" type="button" data-toggle="modal" data-target="#myModal" class=""
+      <button id="noti_event-<%= notification.id %>" class="btn-noti" type="button" data-toggle="modal" data-target="#notiModal"
               data-description="<%= notification.description %>"
               data-place="<%= notification.place %>"
               data-start="<%= notification.time_from %>"
@@ -29,7 +29,7 @@
     <% end %>
     <div id="notied" data-noti="<%= current_user.get_notied %>"></div>
     <% current_user.event_deadline.each do |notification| %>
-      <button id="<%= notification.id %>" class="btn-noti" type="button" data-toggle="modal" data-target="#myModal"
+      <button id="noti_event-<%= notification.id %>" class="btn-noti" type="button" data-toggle="modal" data-target="#notiModal"
               data-description="<%= notification.description %>"
               data-place="<%= notification.place %>"
               data-start="<%= notification.time_from %>"
@@ -54,7 +54,7 @@
   </ul>
 </div>
 
-<div class="modal fade" id="myModal" role="dialog">
+<div class="modal fade" id="notiModal" role="dialog">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
