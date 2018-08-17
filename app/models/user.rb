@@ -2,6 +2,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :confirmable,
     :recoverable, :rememberable, :trackable, :validatable
   has_many :user_events, dependent: :destroy
+  has_many :comments
   has_many :events, through: :user_events, dependent: :destroy
 
   accepts_nested_attributes_for :events

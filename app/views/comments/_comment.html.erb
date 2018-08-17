@@ -1,0 +1,8 @@
+<div class="comment">
+<%= image_tag "avatar.jpg", :size => "40x30" %>
+<strong class="primary-font"><%= current_user.email %></strong>
+<small class="pull-right text-muted">
+<span class="glyphicon glyphicon-time"></span><%=Time.now.to_i - @comment.created_at.to_i %>ms</small>
+<li class="font_comment"> <%= @comment.content %> </li>
+<hr data-brackets-id="12673">
+</div>

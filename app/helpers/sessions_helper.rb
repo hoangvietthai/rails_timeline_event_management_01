@@ -9,9 +9,9 @@ module SessionsHelper
 
   def change_type message_type
     if message_type == "notice"
-      return "success"
+      "success"
     elsif message_type == "alert"
-      return "danger"
+      "danger"
     end
   end
 end

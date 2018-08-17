@@ -1,5 +1,6 @@
 class Event < ApplicationRecord
   has_many :user_events, dependent: :destroy
+  has_many :comments
   has_one :notification, dependent: :destroy
   has_many :users, through: :user_events, dependent: :destroy
   accepts_nested_attributes_for :notification

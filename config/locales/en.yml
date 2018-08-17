@@ -157,6 +157,8 @@ en:
       move: "Move"
       dash: " - "
       from_to: "From - To"
+  controller:
+    not_cmt: "Not comment"
   users:
     mailer:
       confirmation_instructions:

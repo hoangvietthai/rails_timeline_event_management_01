@@ -2,14 +2,28 @@
   <h5 class="pt-30 comment"><%= t ".comment" %></h5>
   <div class="well">
     <h5 class="comment"><%= t ".mind" %></h5>
-    <div class="input-group">
-      <input type="text" id="userComment" class="form-control" placeholder="<%= t ".input_message" %>"/>
-      </br>
-      </br>
-      <div class="btn btn-primary btn-sm"><%= t ".add" %></div>
+    <%= form_for Comment.new, remote: true do |f| %>
+      <div class="input-group box_comment">
+          <%= f.text_field :content, class: "form-control", placeholder: "Write your message"  %>
+          <%= f.hidden_field :event_id, value: @event.id %>
+        </br>
+        </br>
+        <%= f.submit t(".add"), class: "btn btn-primary btn-sm" %>
+      </div>
+    <% end %>
+    <div class="comment_height">
+      <hr data-brackets-id="12673">
+      <ul data-brackets-id="12674" id="sortable" class="list-unstyled ui-sortable">
+        <% @event.comments.reverse.each do |a| %>
+         <%= image_tag "avatar.jpg", :size => "40x30" %>
+        <strong class="primary-font"><%= find_email a.user_id %></strong>
+        <small class="pull-right text-muted">
+           <span class="glyphicon glyphicon-time"></span><%=Time.now.to_i - a.created_at.to_i %>ms</small>
+        </br>
+          <li class="font_comment"> <%= a.content %> </li>
+          <hr data-brackets-id="12673">
+        <%end%>
+      </ul>
     </div>
-    <hr data-brackets-id="12673">
-    <ul data-brackets-id="12674" id="sortable" class="list-unstyled ui-sortable">
-    </ul>
-  </div>
+    </div>
 </div>
