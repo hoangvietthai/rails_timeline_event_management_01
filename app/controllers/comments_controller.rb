@@ -1,9 +1,17 @@
 class CommentsController < ApplicationController
   def create
     @comment = current_user.comments.new comment_params
-    return if @comment.save
-    flash[:danger] = t ".not_cmt"
-    redirect_to home_path
+    if @comment.save
+      ActionCable.server.broadcast "comments",
+        comment_id: @comment.id,
+        content: @comment.content,
+        email: current_user.email,
+        time: Time.now.to_i - @comment.created_at.to_i
+      head :ok
+    else
+      flash[:danger] = t ".not_cmt"
+      redirect_to home_path
+    end
   end
 
   def destroy
@@ -14,6 +22,7 @@ class CommentsController < ApplicationController
   end
 
   private
+
   def comment_params
     params.require(:comment).permit :content, :event_id
   end
