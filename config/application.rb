@@ -34,5 +34,6 @@ module RailsTimelineEventManagement01
     config.i18n.available_locales = [:en, :vi]
     config.i18n.default_locale = :en
     config.action_view.embed_authenticity_token_in_remote_forms = true
+    config.action_cable.mount_path = '/cable'
   end
 end

@@ -41,3 +41,4 @@
 //= require morris.min
 //= require dataTables.bootstrap.min
 //= require dataTables.responsive
+//= require_tree ./channels
