@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get "/contact", to: "static_pages#contact"
   get "/created_events", to: "events_management#created_events"
   get "/invited_events", to: "events_management#invited_events"
+  get "/search_events", to: "events_management#search_events"
   root "static_pages#home"
   resources :users
   resources :events

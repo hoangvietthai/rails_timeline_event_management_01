@@ -69,6 +69,7 @@ en:
     events_mana_header:
       created: "Created events"
       invited: "Invited events"
+      search: "Search events"
     ring:
       place: " at "
       message: "You have a "
@@ -157,6 +158,8 @@ en:
       move: "Move"
       dash: " - "
       from_to: "From - To"
+    search_events:
+      search: "Search"
   controller:
     not_cmt: "Not comment"
   users:
@@ -324,3 +327,8 @@ en:
       comment: "Comment"
       mind: "What is on your mind?"
       add: "Add Comment"
+      delete: "Delete"
+      confirm: "Are you sure?"
+    comment:
+      delete: "Delete"
+      confirm: "Are you sure?"
