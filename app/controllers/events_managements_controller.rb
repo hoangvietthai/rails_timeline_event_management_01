@@ -8,7 +8,10 @@ class EventsManagementsController < ApplicationController
 
   def invited_events; end
 
-  def search_events;  end
+  def search_events
+    @q = current_user.events.search(params[:q])
+    @result = Kaminari.paginate_array(@q.result).page(params[:page]).per Settings.paginate.per_page
+  end
 
   def destroy
     @out_event = UserEvent.find_by event_id: params[:id], user_id: current_user.id
