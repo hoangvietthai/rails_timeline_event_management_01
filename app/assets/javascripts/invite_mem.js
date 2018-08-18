@@ -6,17 +6,30 @@ invite_mem = function () {
         var ev = $('#event-'+id).clone();
         ev = ev.css({ display: "inline-block" });
         $('.modal-body.members').html('')
-        $('.modal-body.members').append(ev);
+        $('.modal-body.members').html(ev);
+        $('.email-close').each(function (element) {
+          $(this).click(function () {
+              $(this).parents('.email-item').remove();
+          });
+        });
     });
   });
 
-  $("#add_btn").each(function(){
-    $(this).on('click',function(){
+  $("#dcmfg").each(function(){
+    $(this).blur(function(){
+      var id = $('.modal-body.members .event-item').data('ev-id');
       var valu = $('#dcmfg').val();
-      $('#dcmfg').val('')
-      $('.add_mem_in').append(
-        '<div class="email-item"><span><div class="email-name">'
-        +valu+'</div><div class="email-close"></div></span></div>')
+      if (valu != ''){
+        $('#dcmfg').val('')
+        $('.ev_mem_'+id).append(
+          '<div class="email-item email-'+valu+'"><span><div class="email-name">'
+          +valu+'</div><button class="email-close"></button></span></div>')
+        $('.email-close').each(function (element) {
+          $(this).on('click', function () {
+            $('.email-'+valu).remove();
+          });
+        });
+      }
     });
   })
 };

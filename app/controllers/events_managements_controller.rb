@@ -1,14 +1,27 @@
-class EventsManagementController < ApplicationController
+class EventsManagementsController < ApplicationController
   layout "events_mana_header", only: [:created_events, :invited_events, :search_events]
   before_action :user_signed_in?, only: [:created_events, :invited_events, :search_events]
-  before_action :get_invited_events
-  before_action :get_created_events
+  before_action :get_invited_events, only: [:invited_events]
+  before_action :get_created_events, only: [:created_events]
 
   def created_events; end
 
   def invited_events; end
 
   def search_events;  end
+
+  def destroy
+    @out_event = UserEvent.find_by event_id: params[:id], user_id: current_user.id
+    @event = Event.find_by id: params[:id]
+    if @out_event.destroy
+      flash[:success] = t ".deleted"
+      @status = true
+    else
+      flash[:warning] = t ".delete_fail"
+      @status = false
+    end
+    respond_to :js
+  end
 
   private
 

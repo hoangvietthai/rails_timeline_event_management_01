@@ -1,0 +1,57 @@
+<div id="wrapper">
+  <div class="container pt-70 pb-70">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="page-header user"><%= t ".invited" %></h1>
+      </div>
+    </div>
+    <div>
+      <%= paginate @invited_events, theme: "twitter-bootstrap-3" %>
+      <table class="table table-bordered table-hover table_fix">
+        <thead>
+          <tr >
+            <th class="fix"><%= t ".description" %></th>
+            <th class="fix"><%= t ".place" %></th>
+            <th class="fix"><%= t ".from_to" %></th>
+            <th class="fix"><%= t ".members" %></th>
+          </tr>
+        </thead>
+        <tbody>
+        <% @invited_events.each do |event| %>
+            <tr event_id="<%= event.id %>">
+              <td><p class="title"><%= event.description %></p></td>
+              <td><%= event.place %></td>
+              <td>
+                <%= event.time_from.strftime("%d/%m/%y %H:%M") %>
+                <%= t ".dash" %>
+                <%= event.time_to.strftime("%d/%m/%y %H:%M") %>
+              </td>
+              <td>
+                <%= link_to t(".invite"), "#",
+                  data: {toggle: "modal"},
+                  class: "btn btn-success dcmbt", remote: true%>
+                <%= link_to t(".out"), events_management_path(event), method: :delete,
+                  data: {toggle: "modal"},
+                  class: "btn btn-success dcmbt", remote: true%>
+              </td>
+            </tr>
+            <div style="display:none;" class="event-item" id="event-<%= event.id %>" data-ev-id="<%= event.id %>">
+            <% current_user.get_members_from_event(event.id).each do |mem| %>
+              <div class="email-item">
+                <span>
+                  <div class="email-name">
+                    <%= first_part_of mem.email %>
+                  </div>
+                  <div class="email-close"></div>
+                </span>
+              </div>
+            <% end %>
+          <div class="add_mem_in ev_mem_<%= event.id %>"></div>
+          </div>
+          <% end %>
+          </tbody>
+      </table>
+      <%= paginate @invited_events, theme: "twitter-bootstrap-3" %>
+    </div>
+  </div>
+</div>

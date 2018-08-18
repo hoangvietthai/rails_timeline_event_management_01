@@ -143,19 +143,21 @@ en:
         sagittis non justo at ultri"
     home:
       home: "Home"
-  events_management:
+  events_managements:
     created_events:
       created: "Created"
       dash: " - "
       invite_remove: "Invite/Remove"
       close: "Close"
-      remove: "Remove"
+      remove: "Remove member"
+      invite: "Invite"
       from_to: "From - To"
     invited_events:
       invited: "Invited"
-      invite_move: "Invite/Move"
+      invite_out: "Invite/Out"
       close: "Close"
-      move: "Move"
+      out: "Out"
+      invite: "Invite"
       dash: " - "
       from_to: "From - To"
     search_events:
