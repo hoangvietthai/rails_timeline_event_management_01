@@ -1,0 +1,27 @@
+<% provide :slidebar_content do %>
+  <div class="sidebar-menu">
+    <ul>
+      <li class="header-menu">
+        <span><%= t ".general" %></span>
+      </li>
+      <li class="sidebar-dropdown">
+        <%= link_to created_events_path do %>
+          <i class="fa fa-address-card-o"></i>
+          <span><%= t ".created" %></span>
+        <% end %>
+      </li>
+      <li class="sidebar-dropdown">
+        <%= link_to invited_events_path do %>
+          <i class="fa fa-calendar-o"></i>
+          <span><%= t ".invited" %></span>
+        <% end %>
+      </li>
+      <li class="sidebar-dropdown">
+        <%= link_to search_events_path do %>
+          <i class="fa fa-search-plus"></i>
+          <span><%= t ".search" %></span>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+<% end %>
