@@ -151,7 +151,7 @@ en:
       close: "Close"
       remove: "Remove member"
       invite: "Invite"
-      from_to: "From - To"
+      from_to: "Time"
     invited_events:
       invited: "Invited"
       invite_out: "Invite/Out"
@@ -159,7 +159,7 @@ en:
       out: "Out"
       invite: "Invite"
       dash: " - "
-      from_to: "From - To"
+      from_to: "Time"
     search_events:
       search: "Search"
     result:

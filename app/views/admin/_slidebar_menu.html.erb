@@ -1,0 +1,15 @@
+<% provide :slidebar_content do %>
+  <div class="sidebar-menu">
+    <ul>
+      <li class="header-menu">
+        <span><%= t ".general" %></span>
+      </li>
+      <li class="sidebar-dropdown">
+        <%= link_to admin_root_path do %>
+          <i class="fa fa-globe"></i>
+          <span><%= t ".user" %></span>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+<% end %>

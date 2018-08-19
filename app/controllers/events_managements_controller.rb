@@ -1,5 +1,5 @@
 class EventsManagementsController < ApplicationController
-  layout "events_mana_header", only: [:created_events, :invited_events, :search_events]
+  layout "index", only: [:created_events, :invited_events, :search_events]
   before_action :user_signed_in?, only: [:created_events, :invited_events, :search_events]
   before_action :get_invited_events, only: [:invited_events]
   before_action :get_created_events, only: [:created_events]

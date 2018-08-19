@@ -29,75 +29,9 @@
               </span>
             </div>
           </div>
-          <div class="sidebar-menu">
-            <ul>
-              <li class="header-menu">
-                <span><%= t ".general" %></span>
-              </li>
-              <li class="sidebar-dropdown">
-                <%= link_to admin_show_user_path do %>
-                  <i class="fa fa-globe"></i>
-                  <span><%= t ".user" %></span>
-                <% end %>
-              </li>
-              <li class="sidebar-dropdown">
-                <%= link_to "#" do %>
-                  <i class="fa fa-shopping-cart"></i>
-                  <span><%= t ".eco" %></span>
-                <% end %>
-              </li>
-              <li class="sidebar-dropdown">
-                <%= link_to "#" do %>
-                  <i class="far fa-gem"></i>
-                  <span><%= t ".components" %></span>
-                <% end %>
-              </li>
-              <li class="sidebar-dropdown">
-                <%= link_to "#" do %>
-                  <i class="fa fa-book"></i>
-                  <span><%= t ".Charts" %></span>
-                <% end %>
-              </li>
-              <li class="sidebar-dropdown">
-                <%= link_to "#" do %>
-                  <i class="fa fa-globe"></i>
-                  <span><%= t ".Maps" %></span>
-                <% end %>
-              </li>
-              <li class="header-menu">
-                <span><%= t ".Extra" %></span>
-              </li>
-              <li>
-                <%= link_to "#" do %>
-                  <i class="fa fa-calendar"></i>
-                  <span><%= t ".Calendar" %></span>
-                <% end %>
-              </li>
-              <li>
-                <%= link_to "#" do %>
-                  <i class="fa fa-folder"></i>
-                  <span><%= t ".Examples" %></span>
-                <% end %>
-              </li>
-              <li>
-                <%= link_to "#" do %>
-                  <i class="fa fa-book"></i>
-                  <span><%= t ".Documentation" %></span>
-                <% end %>
-              </li>
-            </ul>
-          </div>
+          <%= yield :slidebar_content %>
         </div>
         <div class="sidebar-footer">
-          <%= link_to "#" do %>
-            <i class="fa fa-bell"></i>
-          <% end %>
-          <%= link_to "#" do %>
-            <i class="fa fa-envelope"></i>
-          <% end %>
-          <%= link_to "#" do %>
-            <i class="fa fa-cog"></i>
-          <% end %>
           <%= link_to destroy_user_session_path, method: :delete do %>
             <i class="fa fa-power-off"></i>
           <% end %>
