@@ -1,1 +1,6 @@
-$("#new_event").modal("hide");
+$(".alert").remove();
+<% flash.each do |key, value|%>
+  $("div#invite_flash").append("<p id=\"invite_flash\" class=\"invite-flash alert alert-<%= key %>\"><%= value %></p> ");
+<% end %>
+<% flash.clear %>
+$(".email-item").remove();

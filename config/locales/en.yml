@@ -281,6 +281,7 @@ en:
     index:
       home: "Home"
     delete_fail: "Delete fail"
+    update_fail: "Update fail"
   notifications:
     show:
       noti: "Notifications"
@@ -305,6 +306,12 @@ en:
       delete_fail: "Delete fail"
   time_validate: "is cannot bigger than time_to"
   invites:
+    create:
+      account: "Account "
+      has_been_invited: " has been invited!"
+      invited: "Invited to "
+      cant_save: "Error!"
+      not_exists: " not exists"
     form:
       invite: "Invite"
       mind: "Share to your friends..."
