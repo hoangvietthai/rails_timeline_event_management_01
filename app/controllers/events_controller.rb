@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  before_action :check_permission, only: [:update, :destroy]
 
   def index
     @events = current_user.events.select :id, :description, :time_from,
@@ -50,5 +51,12 @@ class EventsController < ApplicationController
   def event_params
     params.require(:event).permit :description, :place, :time_from,
       :time_to, :importance, :remind, notification_attributes: [:notify_before]
+  end
+
+  def check_permission
+    @user_event = UserEvent.find_by event: @event, user: current_user
+    return if @user_event.permission?
+    flash[:danger] = t ".update_fail"
+    redirect_to home_path
   end
 end

@@ -2,16 +2,17 @@
   <h5 class="pt-50 comment"><%= t ".invite" %></h5>
   <div class="well">
     <h5 class="comment"><%= t ".mind" %></h5>
+    <div id = "invite_flash"></div>
     <div>
       <%= form_for :invite, url: invites_path, method: :post, remote: true do |f| %>
         <div class="add-mail-box">
-          <table>
+          <table class="invite">
             <tbody>
             <tr>
               <%= f.hidden_field :event_id, value: @event.id %>
               <td id="list-items">
               </td>
-              <%= f.text_field :to, autofocus: true, autocomplete: "email", class: "email-input-box" %>
+              <%= f.text_field :to, autofocus: true, autocomplete: "email", class: "email-input-box form-control" %>
             </tr>
             </tbody>
           </table>
